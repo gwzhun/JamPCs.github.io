@@ -91,11 +91,12 @@ table thead th{
 
 .cart-total div span{
     color: rgb(255, 255, 221);
+    font-weight: 400;
 }
 
 div.container_total{
     font-family: Urbanist, Strait, Impact, sans-serif;   
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .cart-total {
@@ -122,7 +123,7 @@ div.container_total{
 /*button design*/
 button.checkout_button{
     font-family: Urbanist, Strait, Impact, sans-serif;   
-    font-weight: 700;
+    font-weight: 500;
     background-color: yellow;
     color: black;
     float: right;
