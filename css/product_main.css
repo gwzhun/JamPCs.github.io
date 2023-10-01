@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+@font-face {
+    font-family:Kanit;
+    src: url('/fonts/Kanit/Kanit-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family:Homenaje;
+    src: url('/fonts/Homenaje/Homenaje-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family:Urbanist;
+    src: url('/fonts/Urbanist/Urbanist-VariableFont_wght.ttf') format('ttf');
+}
+
+/*Structural Styles*/
+main{
+    width: 1024;
+}
+
+main h1#LaptopBanners, h1#CustomBanner {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+main h1#LaptopBanners {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+main hr#line1{
+    margin-bottom: 15px;
+}
+
+main hr#line2{
+    margin-top: 15px;
+}
+
+main div.laptop-logos {
+    display: flex;
+}
+
+main div.laptop-logos div.logo {
+    /*set width for each div to one third of page*/
+    max-width: 33.33%;
+    filter: none;
+}
+
+main div#asus-logo img{
+    flex: auto;
+    max-width: 100%;
+}
+
+main div#hp-logo img{
+    flex: auto;
+    max-width: 100%;
+}
+
+main div#lenovo-logo img{
+    flex: auto;
+    max-width: 100%;
+}
+
+main h1#CustomBanner {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+main div.Custom a{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: fit-content;
+}
+
+main div.Custom img {
+    margin: 0;
+    max-width: 100%;
+    width: 75%;
+    height: auto;
+    filter: opacity(0.5);
+    filter: blur(-2px);
+    transition-duration: 0.5s;
+}
+
+/*Responsive Styles*/
+main div.Custom img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(1px 1px 8px rgb(107, 87, 87));
+    max-height: inherit;
+    max-width: 100%;
+    
+}
+
+/*Add a textbox under cursor on hover*/
+
+/*Add a hover effect to all three logo divs*/
+main div.laptop-logos div.logo:hover {
+    cursor: pointer;
+    filter: drop-shadow(1px 1px 8px rgb(107, 87, 87));
+    transition-duration: 0.5s;
+    scale: 1.05;
+}
+
+/*Typography Styles*/
+main h1#LaptopBanners, h1#CustomBanner {
+    text-align: center;
+    font-family: Homenaje, Strait, Impact, sans-serif;
+    font-size: 3rem;
+}

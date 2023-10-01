@@ -1,0 +1,210 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/SignUp.css" />
+  <link rel="icon" href="/image/jampcs icon only.png">
+  <title>JamPCs Sign Up</title>
+
+  <script src="/script/checkstatus-norm.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+
+  <script>
+    // Function to compare the password and confirm password fields
+    function checkPasswordMatch() {
+      var password = document.getElementById("fpassword").value;
+      var confirmPassword = document.getElementById("fconfirmpassword").value;
+      var matchMessage = document.getElementById("password-match-message");
+
+      if (password === confirmPassword) {
+        matchMessage.innerHTML = "Passwords match!";
+        matchMessage.style.color = "green";
+      } else {
+        matchMessage.innerHTML = "Passwords do not match";
+        matchMessage.style.color = "red";
+      }
+    }
+
+    function saveUserData(username, password) {
+      // Check if user data already exists
+      var existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+      // Add the new user data
+      existingUsers.push({ username: username, password: password });
+
+      // Save the updated user data in localStorage
+      localStorage.setItem("users", JSON.stringify(existingUsers));
+    }
+
+    function submitForm() {
+      // Perform any necessary form validation here
+
+      // If validation is successful, store the username and password
+      var username = document.getElementById("fname").value;
+      var password = document.getElementById("fpassword").value;
+
+      // Store the username and password in localStorage
+      saveUserData(username, password);
+
+      // Redirect to the desired page
+      window.location.href = "Login.html"; // Change to your desired URL
+      return false; // Prevent the default form submission
+    }
+
+    function show_password2() {
+      var x = document.getElementById("fconfirmpassword");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+
+    function show_password1() {
+      var x = document.getElementById("fpassword");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+
+    window.onload = function () {
+      var recaptcha = document.forms["captcha_form"]["g-recaptcha-response"];
+      recaptcha.required = true;
+      recaptcha.oninvalid = function (e) {
+        // do something
+        alert("Please complete the captcha");
+      }
+    }
+
+
+  </script>
+
+</head>
+
+<body>
+  <header>
+
+    <!-------------------- Top Navigator -------------------->
+    <div class="wrap-header">
+
+      <!---------- Logo ---------->
+      <div class="header-left">
+        <a href="/html/home.html"><img src="/image/icon/jampcs_white.png" alt="Home"></a>
+      </div>
+
+      <div class="header-mid">
+
+        <!---------- Products ---------->
+        <div class="hover-products">
+          <a href="/html/product-main.html">Products</a>
+          <div class="wrap-product">
+            <div class="content-products">
+              <div class="wrap-column">
+                <div class="column1">
+                  <p>Brands</p>
+                  <div class="hover-content-wrap">
+                    <a href="/html/product-asus.html">ASUS</a>
+                    <a href="/html/product-hp.html">HP</a>
+                    <a href="/html/product-lenovo.html">LENOVO</a>
+                  </div>
+                </div>
+                <div class="column2">
+                  <p>Customs</p>
+                  <div class="hover-content-wrap">
+                    <a href="/html/custom-office.html">Build your own laptop</a>
+                    <a href="/html/build_guide.html">Guide for beginners</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="/html/Promotion.html">Offers</a>
+        <a href="/html/about-us.html">About US</a>
+
+      </div>
+
+      <!---------- Icons ---------->
+      <div class="header-right">
+        <a href="/html/support.html"><img src="/image/icon/icon_question.png" alt="support"></a>
+        <a href="/html/cart.html"><img src="/image/icon/icon_cart.png" alt="cart"></a>
+        <a href="/html/login.html"><img src="/image/icon/icon_login.png" alt="login"></a>
+      </div>
+
+    </div>
+    </div>
+
+  </header>
+
+  <main>
+
+    <div class="container">
+      <div class="title-top">
+        <h3>Sign Up</h3>
+      </div>
+      <form method="get" action="javascript:void(0);" onsubmit="submitForm(event)" id="signup_form">
+
+        <div class="username">
+          <label for="fname">Username</label><br>
+          <br><input type="text" id="fname" name="fname" placeholder="Username" required minlength="8" maxlength="20">
+        </div>
+
+        <div class="fullname">
+          <label for="ffullname">Full Name</label><br>
+          <br><input type="text" id="ffullname" name="ffullname" placeholder="Full Name" required
+            pattern="^[A-Za-z\s'-]+$" />
+        </div>
+
+        <div class="contactnum">
+          <label for="fcontactnum">Contact Number</label><br>
+          <br><input type="tel" id="fcontactnum" name="fcontactnum" placeholder="0XX-XXXXXXX" required
+            pattern="/^(?=\S{10,12}$)(\d{3}[-\s]?\d{4}[-\s]?\d{4}|\d{10}|\d{3}[-\s]?\d{7})$/">
+        </div>
+
+        <div class="email">
+          <label for="femail">Email</label><br>
+          <br><input type="email" id="femail" name="femail" placeholder="example@gmail.com" required
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+        </div>
+
+        <div class="password">
+          <label for="fpassword">Password</label><br>
+          <br><input type="password" id="fpassword" name="fpassword" placeholder="Password" required minlength="8"
+            maxlength="20"><br><br>
+          <p><input class="checkbox" type="checkbox" onclick="show_password1()">Show Password
+          </p>
+        </div>
+
+        <div class="confirmpassword">
+          <label for="fconfirmpassword">Confirm Password</label><br>
+          <br><input type="password" id="fconfirmpassword" name="fconfirmpassword" placeholder="Re-enter Password"
+            required onkeyup="checkPasswordMatch()"><br><br>
+          <p><input class="checkbox" type="checkbox" onclick="show_password2()">Show Password
+          </p>
+        </div>
+
+        <p id="password-match-message"></p>
+
+        <div class="form_container">
+          <form action="#" id="captcha_form">
+            <div class="g-recaptcha" data-sitekey="6LfrFKQUAAAAAMzFobDZ7ZWy982lDxeps8cd1I2i"></div>
+            <button type="submit">Create Account</button>
+          </form>
+        </div>
+
+        <div style="text-align: center; color: black; font-family: Urbanist, Strait, Impact, sans-serif;">
+          -Or-<br><br>
+          <a href="Login.html"
+            style="color: rgb(5, 110, 180); text-decoration: underline; font-family: Urbanist, Strait, Impact, sans-serif;">Already
+            have an account?</a>
+        </div>
+    </div>
+
+  </main>
+
+</body>
+
+</html>

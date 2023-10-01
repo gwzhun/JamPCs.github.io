@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/payment-info.css" />
+    <link rel="icon" href="/image/jamicon.png" type="png">
+    <title>JamPCs payment</title>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="payment-outwrap">
+            <div class="payment-wrap">
+
+                <div class="payment-logo">
+                    <a href="home.html"><img src="/image/jampcs_logo.png" alt="jamCPs" width="400px"></a>
+                </div>
+
+                <!-------------------------- Navigation -------------------------->
+                <div class="payment-nav">
+                    <ul>
+                        <li><a href="payment-info.html" style="color: black;">Infomation</a> &#8594 </li>
+                        <li><a href="payment-ship.html">Shipping</a> &#8594 </li>
+                        <li><a href="payment-checkout.html">Payment</a></li>
+                    </ul>
+                </div>
+
+                <!-------------------------- Form -------------------------->
+                <div class="payment-form">
+                    <form action="payment-ship.html" id="shipping-address">
+                        <div class="form-contact">
+                            <form action="#">
+                                <h3>Contact</h3>
+                                <input type="email" name="email" id="email" placeholder="Email" size="70" autofocus
+                                    required pattern="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/">
+
+                        </div>
+
+                        <div class="form-shipping">
+
+                            <h3>Shipping address</h3>
+                            <p>Country</p>
+                            <select name="country" id="country">
+                                <option value="Malaysia">MALAYSIA</option>
+                            </select>
+                            <div class="form-shipping-name">
+                                <div class="first_name">
+                                    <p>First Name</p>
+                                    <input type="text" name="first_name" id="first_name" placeholder="First name"
+                                        size="31" required pattern="^[A-Za-z\s]+$">
+                                </div>
+                                <div class="last_name">
+                                    <p>Last Name</p>
+                                    <input type="text" name="last_name" id="last_name" placeholder="Last name" size="31"
+                                        required pattern="^[A-Za-z\s]+$">
+                                </div>
+                            </div>
+
+                            <p>Company</p>
+                            <input type="text" name="company" id="company" placeholder="Company (optional)" size="70">
+                            <p>Address</p>
+                            <input type="text" name="address" id="address" placeholder="Address" size="70" required pattern="^(?=\S*\s)(?=[^a-zA-Z]*[a-zA-Z])(?=\D*\d)[a-zA-Z\d\s',.#/-]*$"> <!-- (?=\S*\s) = at least one space 
+                                                               (?=[^a-zA-Z]*[a-zA-Z]) = at least on letter
+                                                               (?=\D*\d) = at least one digit
+                                                               [a-zA-Z\d\s',.#/-]* =  zero or more letters, digit, whitespace and some particular symbol-->
+                            <p>Apartment</p>
+                            <input type="text" name="Apartment" id="Apartment"
+                                placeholder="Apartment, suite, etc. (optional)" size="70">
+
+                            <div class="form-shipping-address">
+                                <div class="postcode">
+                                    <p>Postcode</p>
+                                    <input type="text" name="postcode" id="postcode" placeholder="Postcode"
+                                        maxlength="5" pattern="[0-9]{5}">
+                                </div>
+                                <div class="city">
+                                    <p>City</p>
+                                    <input type="text" name="city" id="city" placeholder="City" pattern="^[A-Za-z\s]+$">
+                                </div>
+                                <div class="state">
+                                    <p>State</p>
+                                    <select name="state" id="state">
+                                        <option value="Johor">Johor</option>
+                                        <option value="Kedah">Kedah</option>
+                                        <option value="Kelantan">Kelantan</option>
+                                        <option value="Kuala Lumpur">Kuala Lumpur</option>
+                                        <option value="Labuan">Labuan</option>
+                                        <option value="Malacca">Malacca</option>
+                                        <option value="Negeri Sembilan">Negeri Sembilan</option>
+                                        <option value="Pahang">Pahang</option>
+                                        <option value="Penang">Penang</option>
+                                        <option value="Perak">Perak</option>
+                                        <option value="Perlis">Perlis</option>
+                                        <option value="Putrajaya">Putrajaya</option>
+                                        <option value="Sabah">Sabah</option>
+                                        <option value="Sarawak">Sarawak</option>
+                                        <option value="Selangor">Selangor</option>
+                                        <option value="Terengganu">Terengganu</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <p>Phone</p>
+                            <input type="tel" id="phone" name="phone" size="70" placeholder="Phone" maxlength="10"
+                                pattern="^(?=\S{10,12}$)(\d{3}[-\s]?\d{4}[-\s]?\d{4}|\d{10}|\d{3}[-\s]?\d{7})$" required>
+                        </div>
+                </div>
+
+                <div class="form-bottom">
+                    <div class="return-cart">
+                        <a href="cart.html">&#8592; &nbsp; Return to cart</a>
+                    </div>
+
+                    <a href="payment-ship.html">
+                        <div class="payment-button">
+                            <button>Continue to shipping</button>
+                        </div>
+                    </a>
+                </div>
+                </form>
+
+                <!-------------------------- Footer -------------------------->
+                <div class="payment-footer">
+                    <p>All right reserved JAM PC</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-------------------------- Cart -------------------------->
+        <div class="cart-outwrap">
+
+            <div class="cart-inwrap">
+
+                <div class="total-wrap">
+
+                    <div class="total"> Subtotal:
+                        <div class="total-container">
+                            <span id="total_1"></span>
+                        </div>
+                    </div>
+
+                    <div class="total">Shipping Fee:
+                        <div class="total-container">
+                            Free
+                        </div>
+                    </div>
+
+                    <div class="total">Total:
+                        <div class="total-container">
+                            <span id="total_2"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Save form values to localStorage 
+        document.getElementById("shipping-address").addEventListener("submit", function (e) {
+            e.preventDefault();
+            localStorage.setItem("email", document.getElementById("email").value);
+            localStorage.setItem("country", document.getElementById("country").value);
+            localStorage.setItem("first_name", document.getElementById("first_name").value);
+            localStorage.setItem("last_name", document.getElementById("last_name").value);
+            localStorage.setItem("company", document.getElementById("company").value);
+            localStorage.setItem("address", document.getElementById("address").value);
+            localStorage.setItem("Apartment", document.getElementById("Apartment").value);
+            localStorage.setItem("postcode", document.getElementById("postcode").value);
+            localStorage.setItem("city", document.getElementById("city").value);
+            localStorage.setItem("state", document.getElementById("state").value);
+            localStorage.setItem("phone", document.getElementById("phone").value);
+            // Add more input fields as needed
+
+            window.location.href = "payment-ship.html";
+        });
+
+        // JavaScript to populate form with localStorage values on page load
+        window.addEventListener("load", function () {
+            // Retrieve the total amount from the cart
+            var totalValue = 0;
+            const cartValue = localStorage.getItem("cartTotal");
+            const customValue = localStorage.getItem("Customtotal");
+
+            // Check if cartValue and customValue are not null or undefined
+            if (cartValue !== null && customValue !== null) {
+                totalValue = parseFloat(cartValue) + parseFloat(customValue);
+            } else if (cartValue !== null) {
+                totalValue = parseFloat(cartValue);
+            } else if (customValue !== null) {
+                totalValue = parseFloat(customValue);
+            }
+
+            console.log("cartValue:", cartValue); // Add this line for debugging
+            console.log("customValue:", customValue); // Add this line for debugging
+
+            // Display the total value according to the cart
+            var totalbox1 = document.getElementById("total_1");
+            var totalbox2 = document.getElementById("total_2");
+
+            // Display the total value according to the cart
+            totalbox1.textContent = "RM " + totalValue.toFixed(2);
+            totalbox2.textContent = "RM " + totalValue.toFixed(2);
+
+            localStorage.setItem("Total", totalValue);
+        });
+
+    </script>
+
+
+</body>
+
+
+
+</html>

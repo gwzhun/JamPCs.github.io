@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="/css/header.css"/>
+        <link rel="stylesheet" href="/css/footer.css"/>
+        <link rel="stylesheet" href="/css/support.css"/>
+        <link rel="stylesheet" href="/css/contact-us.css"/>
+        <title>JamPCs Support</title>
+        <link rel="icon" href="/image/jamicon.png" type="/image/png">
+        <script src="/script/checkstatus-norm.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            // querySelectorAll = select all the class of the item
+            const accordions = document.querySelectorAll('.accordion');
+
+            // Loop through each accordion element   
+            accordions.forEach(accordion => {
+                // Find the button element inside the current accordion
+                const button = accordion.querySelector('.accordion-button');
+                // Find the content element next to the current accordion
+                const content = accordion.nextElementSibling;
+
+                // Add a click event listener to the button
+                button.addEventListener('click', () => {
+                    // Check if the content is currently closed (maxHeight is 0 or not set)
+                    if (content.style.maxHeight === '0px' || content.style.maxHeight === '') {
+                        // Open the content by setting maxHeight to its scrollHeight
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        button.classList.add('rotated'); // Add the rotated class
+                    } else {
+                        // Close the content by setting maxHeight to 0
+                        content.style.maxHeight = '0px';
+                        button.classList.remove('rotated'); // Remove the rotated class
+                    }
+            });
+        });
+
+        // this script is to fixed the selection when user enter the type of service
+        const h3Elements = document.querySelectorAll('.formWrapper h3');
+        h3Elements.forEach(h3 => {
+            h3.addEventListener('click', () => {
+                // Reset the color of all h3 elements to their original color (e.g., black)
+                h3Elements.forEach(element => {
+                    
+                    element.style.color = 'white';
+                });
+
+                // Change the color of the clicked h3 element to a different color (e.g., red)
+                h3.style.color = 'black'; // You can change 'red' to any color you prefer
+                
+                h3.addEventListener('click', () => {
+                if (h3.style.color === 'white') {
+                    h3.style.color = 'black'; // Change to a different color when clicked
+                } else {
+                    h3.style.color = 'white'; // Change back to the original color when clicked again
+                }
+            });
+            });
+        });
+
+
+        //function to validate the customer name
+        function validateName() {
+            // Add a console.log statement to check if the function is called
+            console.log("validateName function called");
+            // Get the input element by its id
+            var nameInput = document.getElementById("name");
+
+            // Get the value entered by the user
+            var name = nameInput.value.trim();
+
+
+            // Check if the name is empty
+            if (name === "") {
+                alert("Please enter a name.");
+                nameInput.focus();
+                return false; // Prevent form submission
+            }
+
+            // Check if the name contains only letters and spaces
+            var namePattern = /^[A-Za-z\s]+$/; // Allow letters and spaces only
+
+            if (!namePattern.test(name)) {
+                alert("Name should contain only letters and spaces.");
+                nameInput.focus();
+                return false; // Prevent form submission
+            }
+
+            // Name is valid
+            return true;
+        }
+        
+        //function to validate the phone number
+        function validatePhoneNumber() {
+            // Get the input element by its id
+            var phoneInput = document.getElementById("phone");
+            // Get the value entered by the user
+            var phoneNumber = phoneInput.value.trim();
+            //define a regular expression pattern for a format of phone number
+            var phonePattern = /^(?=\S{10,12}$)(\d{3}[-\s]?\d{4}[-\s]?\d{4}|\d{10}|\d{3}[-\s]?\d{7})$/;
+                // the length must between 10-12
+                //valid phone number    1)123-45678901     2)12345678901   3)123-45678901  4)123-4567890
+                //invalid phone number  1)123-456 789012    2)123-456-78901 3)123-45 78901  4)123 45678901  5)123456789012  6)abc-def ghijklmno
+            if (!phonePattern.test(phoneNumber)) {
+                alert("Please enter a valid format phone number.");
+                phoneInput.focus();
+                return false;
+            }
+            return true;
+        }
+
+        //function to validate the email
+        function validateEmail() {
+            // Get the input element by its id
+            var emailInput = document.getElementById("email");
+            // Get the value entered by the user
+            var email = emailInput.value.trim();
+            // Define a regular expression pattern for a valid email address
+            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                //valid email address       1)john.doe@example.com  2)user123@sub.domain.com    3)jane_doe123@my-mail.co.uk  4)info@my_site.net
+                //invalid email address     1)invalid-email (missing "@" and domain)        2)@example.com (missing username)             3)user@.com (missing domain)      4)
+
+            // Check if the email matches the pattern
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                emailInput.focus();
+                return false; // Prevent form submission
+            }
+
+            // Email is valid
+            return true;
+        }
+
+        
+            // Handle form submission
+        const form = document.querySelector('.formContainer');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the form from submitting by default
+
+            if (validateForm()) {
+                // If validation passes, you can submit the form here
+                // For now, let's assume you're just displaying an alert
+                alert("Form submitted successfully!");
+            }
+        });
+
+        //function to validate the entire form
+        function validateForm() {
+            console.log("validateForm function called");
+
+            if (!validateName() || !validatePhoneNumber() || !validateEmail()) {
+                return false; // Prevent form submission when validation fails
+            }
+
+            // Display a success message
+            alert("Submission Successful!");
+
+            return true; // Allow form submission
+        }
+});
+    </script>
+    
+    </head>
+
+
+    <body>
+        <header>
+
+            <!-------------------- Top Navigator -------------------->
+            <div class="wrap-header">
+    
+                <!---------- Logo ---------->
+                <div class="header-left">
+                    <a href="home.html"><img src="/image/icon/jampcs_white.png" alt="Home"></a>
+                </div>
+    
+                <div class="header-mid">
+    
+                    <!---------- Products ---------->
+                    <div class="hover-products">
+                        <a href="product-main.html">Products</a>
+                        <div class="wrap-product">
+                            <div class="content-products">
+                                <div class="wrap-column">
+                                    <div class="column1">
+                                        <p>Brands</p>
+                                        <div class="hover-content-wrap">
+                                            <a href="product-asus.html">ASUS</a>
+                                            <a href="product-hp.html">HP</a>
+                                            <a href="product-lenovo.html">LENOVO</a>
+                                        </div>
+                                    </div>
+                                    <div class="column2">
+                                        <p>Customs</p>
+                                        <div class="hover-content-wrap">
+                                            <a href="custom-office.html">Build your own laptop</a>
+                                            <a href="build_guide.html">Guide for beginners</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="Promotion.html">Offers</a>
+                    <a href="about-us.html">About US</a>
+    
+                </div>
+    
+    
+                <!---------- Icons ---------->
+                <div class="header-right">
+                    <a href="support.html"><img src="/image/icon/icon_question.png" alt="support"></a>
+                    <a href="cart.html"><img src="/image/icon/icon_cart.png" alt="cart"></a>
+    
+                    <div class="icon-container" onmouseover="showLoginHover()" onmouseout="hideLoginHover()">
+                        <img src="/image/icon/icon_login.png" alt="login">
+    
+                        <div id ="login-hover-wrap" style="display: none;">
+                            <div id="logout-hover">
+                                <a onclick="logout()">Logout</a>
+                            </div>
+                            <div id="login-hover">
+                                <a href="login.html">Login</a>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+            </div>
+            </div>
+    
+        </header>
+    
+         <!-------------------- Content -------------------->
+
+        <main>
+            
+            <h1 class="Help">Need Help?</h1>
+
+        <div class="support">
+            <div class="support-icon">
+                <a href="#serviceCenterSection"><img src="/image/icon/service_icon.png" alt=""/></a>
+                <h2>Service Centre</h2>
+                <p>We Offer Service and<br>
+                    Maintenance
+                </p>
+            </div>
+
+            <div class="support-icon">
+                <a href="#faqSection"><img src="/image/icon/FAQ_icon.png" alt=""/></a>
+                <h2>FAQs</h2>
+                <p>Various FAQs that you <br>
+                    may be curious 
+                </p>
+            </div>
+
+            <div class="support-icon">
+                <a href="#contactUsSection"><img src="/image/icon/contactus_icon.png" alt=""/></a>
+                <h2>Contact Us</h2>
+                <p>Tell us what you need, <br>
+                    We Reply Fast!
+                </p>
+            </div>
+        </div>
+
+
+        <div class="serviceCenter" id="serviceCenterSection">
+            <h1>Service Centre</h1>
+            <h2>Send your request here</h2>
+
+            <div class="formWrapper">
+                <h2>Type of Service</h2>
+                <h3>Product Status</h3>
+                <h3>Repair/Service</h3>
+                <h3>Warranty Check</h3>
+
+                <form class="formContainer" method="post" onsubmit="return validateForm();">
+
+                    <div class="formField">
+                        <div class="inline labelWrapper">
+                            <label for="name" class="label">Name</label>
+                        </div>
+                        <div class="inline">
+                            <input type="text" class="input" id="name" name="name" required  placeholder=" Full Name" />
+                        </div>
+                    </div>
+
+                    <div class="formField">
+                        <div class="inline labelWrapper">
+                            <label for="phone"class="label">Phone</label>
+                        </div>
+                        <div class="inline">
+                            <input type="tel" class="input" id="phone" name="phone" required  placeholder=" 0XX-XXXXXX" />
+                        </div>
+                    </div>
+
+                    <div class="formField">
+                        <div class="inline labelWrapper">
+                            <label for="email" class="label">Email</label>
+                        </div>
+                        <div for="email" class="inline">
+                            <input type="email" class="input" id="email" name="email" required placeholder=" Example@gmail.com"/>
+                        </div>
+                    </div>
+
+                    <div class="formField">
+                        <div class="inline labelWrapper">
+                            <label for="option" class="label">More Details</label>
+                        </div>
+                        <div class="inline">
+                            <textarea  class="textArea" placeholder=" Optional"></textarea>
+                        </div>
+                    </div>
+
+                    <button class="button">Submit</button>
+                </form>
+
+            </div>
+        </div>
+        
+        <div class="faq" id="faqSection">
+            <h2>FAQs</h2>
+            <h1>Frequently asked questions</h1>
+            <h2>Have questions? We’re here to help</h2>
+
+            <div class="questionWrapper">
+                <div class="accordionWrapper"> 
+                    <div class="accordion">
+                        <h2>When will JamPCs start to process my order?</h2>
+                        <img class="accordion-button" src="/image/button.png" >
+                    </div>
+                    <div class="accordion-content">
+                        <p>JamPCs will process all orders immediately once we have received the payment of the total cost of your order.</p>
+                    </div>
+                </div>
+            
+                <div class="accordionWrapper"> 
+                    <div class="accordion">
+                        <h2>Are the batteries removable?</h2>
+                        <img class="accordion-button" src="/image/button.png" />
+                    </div>
+                    <div class="accordion-content">
+                        <p>Depending on the model as most of our batteries are built into the machine. Therefore, the only way to remove them is to unscrew the back panel. </p>
+                    </div>
+                </div>
+            
+                <div class="accordionWrapper"> 
+                    <div class="accordion">
+                        <h2>Can I cancel the order for a refund after paying the full payment?</h2>
+                        <img class="accordion-button" src="/image/button.png" />
+                    </div>
+                    <div class="accordion-content">
+                        <p>Because all laptops and PCs are made to order, once the payment has been processed, there will be no refunds</p>
+                    </div>
+                </div>
+
+                <div class="accordionWrapper"> 
+                    <div class="accordion">
+                        <h2>Do I have to buy Windows for my Gaming Computer?</h2>
+                        <img class="accordion-button" src="/image/button.png" />
+                    </div>
+                    <div class="accordion-content">
+                        <p>You do not have to buy Windows operating system, but it is definitely the best one for gaming. <br>Almost all games made are compatible with windows – the same is not true for MacOS or Linux. Linux computers can work fine, but you won’t have as many options as on Windows. A vast majority of gamers use Windows and you’ll get the most support if you go with Windows. I personally use Windows for all PC gaming activities.</p>
+                    </div>
+                </div>
+
+                <div class="accordionWrapper"> 
+                    <div class="accordion">
+                        <h2>Is there a fee for repair/maintence?</h2>
+                        <img class="accordion-button" src="/image/button.png" />
+                    </div>
+                    <div class="accordion-content">
+                        <p>For issues covered under the Warranty and within the warranty period, there will be no additional fees.
+                            <br>For out-of-warranty services, the repair cost is subject to the problem diagnosed. A minimum of RM 100 will be charged as diagnosis fee. This diagnosis fee can be waived if repair is done.</p>
+                    </div>
+                </div>
+
+                <div class="accordionWrapper"> 
+                    <div class="accordion">
+                        <h2>Do I need more than 8GB of RAM? </h2>
+                        <img class="accordion-button" src="/image/button.png" />
+                    </div>
+                    <div class="accordion-content">
+                        <p>If it’s in your budget, it would be highly recommended to run more than 8GB of RAM. 12-16GB is ideal for most gaming desktops, but 8 GB will still run most games well.</p>
+                    </div>
+                </div>
+
+                <div class="accordionWrapper"> 
+                    <div class="accordion">
+                        <h2>What is the benefit of custom PC? </h2>
+                        <img class="accordion-button" src="/image/button.png" />
+                    </div>
+                    <div class="accordion-content">
+                        <p>This means faster loading times when gaming or running memory intensive programs such as video editing software. <br> Custom PCs also tend to be more reliable than pre-built models since they're designed with specific tasks in mind, meaning fewer hardware issues down the line.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="contact-us" id="contactUsSection">
+
+            <h1> Get in Touch with Us</h1>
+            <div class="container-getintouch">
+
+                <div class="detail">
+                    <div class="location">
+                       <img class="location-icon" src="/image/icon/location_icon.png" alt="location icon"/>
+                        <p class="address">77,Lorong Lembah Permai 3, 11200 Tanjung Bungah, Pulau Pinang</p>
+                    </div>
+                    
+                    <div class="phone">
+                        <img class="phone-icon" src="/image/icon/phone_icon.png" alt="phone icon"/>
+                        <p class="phone-number"><a href="tel:+11234567890">+1 (123) 456-7890</a></p>
+                    </div>
+        
+                    <div class="email">
+                        <img class="email-icon" src="/image/icon/email_icon.png" alt="email icon"/>
+                        <p class="e-mail"><a href="mailto:example@example.com">example@example.com</a></p>
+                    </div>
+                </div>
+      
+                <div class="maps">
+
+                    <div class="googlemap">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.760949189056!2d100.28229421134277!3d5.453210534650336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac2c0305a5483%3A0xfeb1c7560c785259!2sTAR%20UMT%20Penang%20Branch!5e0!3m2!1sen!2smy!4v1692514862838!5m2!1sen!2smy"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                </div>
+        
+            </div>
+        </div>
+    </div>
+</main>
+
+        
+      <!-------------------- Footer -------------------->
+      <footer>
+        <div class="footer-col-wrap">
+            <div class="footer-col1">
+                <h4>Quick Link</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="product-main.html">Products</a></li>
+                    <li><a href="Promotion.html">Offers</a></li>
+                    <li><a href="custom-office.html">Custom Builds</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col2">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="support.html">Service Centre</a></li>
+                    <li><a href="support.html">FAQs</a></li>
+                    <li><a href="support.html">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col3">
+                <h4>Opening Hours</h4>
+                <p> Mon-Fri </p>
+                <p> 09:00a.m.-6:00p.m. </p>
+                <p> Sat & Sun: Closed </p>
+
+            </div>
+            <div class="footer-col4">
+                <h4>Follow us</h4>
+
+                <!--------- social media icon --------->
+                <div class="social-icon-wrap">
+                    <a href="#"><img src="/image/icon/logo_facebook.png" alt=""><i></i></a>
+                    <a href="#"><img src="/image/icon/logo_youtube.png" alt=""><i></i></a>
+                    <a href="#"><img src="/image/icon/logo_whatsapp.png" alt=""><i></i></a>
+                    <a href="#"><img src="/image/icon/logo_insta.png" alt=""><i></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>This website serves as a submission for the "BAIT1023 Web Design and Development" course at TARUMT Penang Branch. It is not intended for commercial use or public dissemination beyond the scope of the course.</p> <!-- &#168 = unicode of copyright symbol -->
+        </div>
+
+    </footer>
+
+
+
+    </body>
+</html>

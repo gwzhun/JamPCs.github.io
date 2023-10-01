@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+@font-face {
+    font-family:Kanit;
+    src: url(/fonts/Kanit/Kanit-Regular.ttf);
+}
+
+@font-face {
+    font-family:Homenaje;
+    src: url(/fonts/Homenaje/Homenaje-Regular.ttf);
+}
+
+@font-face {
+    font-family:Urbanist;
+    src: url(/fonts/Urbanist/static/Urbanist-Thin.ttf);
+}
+
+body{
+    background-color: #1c1c1c;
+    color :rgba(255, 255, 255, 0.8);
+}
+
+
+main .container{
+    background-color:  lightgray;
+    width: 1100px;
+    height: 850px;
+    margin-top: 150px;
+    border-radius: 10%;
+}
+
+main .title-top{
+    text-align: center;
+}
+
+main .title-top h3{
+    font-size: 35px;
+    padding: 30px;
+    color: black;
+    font-family: Urbanist, Strait, Impact, sans-serif;;
+}
+
+main  .top-text h3{
+    font-size: 40px;
+    color: black;
+    margin: 0;
+    text-align: center;
+    padding-top: 30px;
+}
+
+main  div > input{
+    border-radius: 10px;
+    border-style: none;
+    margin-top: -10px;
+    margin-left: -10px;
+    height: 40px;
+    width: 350px; 
+    font-size: 20px;
+    text-indent: 10px;
+    color: #1c1c1c;
+}
+
+main  label{
+    color: #1c1c1c;
+    font-family: Urbanist, Strait, Impact, sans-serif;
+}
+
+::-webkit-input-placeholder{
+    font-size: 20px;
+}
+
+div.username{
+    float: left;
+    text-align: center;
+    margin-left: 120px;
+    font-size: 25px;
+}
+
+main  div.fullname{
+    float: right;
+    text-align: center;
+    margin-right: 120px;
+    font-size: 25px;
+}
+
+main  div.contactnum{
+    float: left;
+    text-align: center;
+    margin-left: 120px;
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+main  div.email{
+    float: right;
+    text-align: center;
+    margin-right: 120px;
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+main  div.password{
+    float: left;
+    text-align: center;
+    margin-left: 120px;
+    padding-top: 30px;
+    font-size: 25px;
+}
+
+main  p{
+    float: left;
+    font-size: 20px;
+    margin-top: -10px;
+    margin-bottom: 50px;
+    color: #1c1c1c;
+    font-family: Urbanist, Strait, Impact, sans-serif;
+}
+
+main  p#password-match-message{
+    float: left;
+    margin-top: -40px;
+    margin-left: 620px;
+    margin-bottom: 0px;
+}
+
+main div.confirmpassword{
+    float: right;
+    text-align: center;
+    padding-right: 120px;
+    padding-top: 30px;
+    font-size: 25px;
+}
+
+main  .checkbox{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+form{
+    text-align: center;
+    display:inline-block;
+    padding-left: 20px;
+}
+
+main button{
+    font-size: 25px;    
+    display: inline-block;
+    width: 200px;
+    height: 80px;
+    border: solid 2px black;
+    border-radius: 20px;
+    margin-top: 120px;
+    background-color: #FCCE22;
+    color: black;
+    font-family: Urbanist, Strait, Impact, sans-serif;
+}
+
+main button:hover{
+    border:solid 2px black rgba(255, 255, 255, 0.8);
+    background-color: #1c1c1c;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+main button:active{
+    border: solid 2px rgba(255, 255, 255, 0.8);
+    background-color: #1c1c1c;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    scale: 0.9; 
+}

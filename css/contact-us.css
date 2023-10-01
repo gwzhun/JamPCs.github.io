@@ -1,0 +1,125 @@
+@font-face {
+    font-family:Kanit;
+    src: url('/fonts/Kanit/Kanit-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family:Homenaje;
+    src: url('/fonts/Homenaje/Homenaje-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family:Urbanist;
+    src: url('/fonts/Urbanist/Urbanist-VariableFont_wght.ttf') format('ttf');
+}
+
+
+.contact-us h1{
+    color: white;
+    text-align: center;
+    font-family: Kanit, Monserrat, Hind, Impact, sans-serif;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1px;
+    padding: 60px;
+    transition: transform 0.2s;
+    margin-top: 130px;
+    margin-bottom: 20px;
+    cursor: default;
+}
+
+.contact-us h1:hover{
+    transform: translateY(-5px);
+}
+
+.contact-us .container-getintouch{
+    width: 1024px;
+}
+
+.container-getintouch{
+    display: flex;
+    flex-direction: row; /* Arrange items horizontally */
+    justify-content: center;
+    align-items: center; /* Center content horizontally and vertically */
+    margin-bottom: 200px;
+    background-color: grey;
+    border-radius: 15px;
+    height: 500px;
+}
+
+
+
+.location,
+.phone,
+.email{
+    display: flex;        /* Display items horizontally */
+    align-items: center;  /* Center items vertically within .address */
+    gap: 100px;           /* Add spacing between items */
+    padding: 30px;
+    margin: 0;
+}
+
+.location-icon,
+.phone-icon,
+.email-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0;
+    transition: transform 0.2s;
+}
+
+                    /* hover effect */
+.location-icon:hover,
+.phone-icon:hover,
+.email-icon:hover {
+    transform: scale(1.1);
+}
+
+
+                    /* txt words */
+
+.detail p{
+    text-align: left;
+    color: #fff;
+    font-family: Itim,cursive;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+
+
+.detail p a{
+    font-weight: 500;
+    font-family: Itim,cursive;
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+    transition: color 0.2s;
+}
+
+.detail p a:hover{
+    color: #f9fafc;
+    cursor: pointer;
+    color: #453b3b;
+}
+
+.googlemap iframe{
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    padding: auto;
+    opacity: 80%;
+    padding: 10px;
+}
+
+
+
+
+
+
+

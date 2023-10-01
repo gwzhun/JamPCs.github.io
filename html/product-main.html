@@ -1,0 +1,220 @@
+<!DOCTYPE html />
+<html>
+
+<head>
+    <!--
+        BAIT1023 RSW1 Assignment
+        JamPCs website
+
+        Products Main page
+        Author: Chin Gian Terng
+        Date: 18 August 2023
+
+        Filename: Product_main.html
+    -->
+    <base href="">
+    <meta charset="utf-8" />
+    <title>Products</title>
+    <link rel="icon" href="/image/jamicon.png" type="png">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/product_main.css">
+    <script src="/script/checkstatus-norm.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            var asus = document.getElementById("asus-logo");
+            var hp = document.getElementById("hp-logo");
+            var lenovo = document.getElementById("lenovo-logo");
+
+            asus.addEventListener("mouseover", function () {
+                document.getElementById("hp-logo").style.filter = "blur(8px)";
+                document.getElementById("lenovo-logo").style.filter = "blur(8px)";
+            });
+
+            asus.addEventListener("mouseout", function () {
+                document.getElementById("hp-logo").style.filter = "none";
+                document.getElementById("lenovo-logo").style.filter = "none";
+            });
+
+            hp.addEventListener("mouseover", function () {
+                document.getElementById("asus-logo").style.filter = "blur(8px)";
+                document.getElementById("lenovo-logo").style.filter = "blur(8px)";
+            });
+
+            hp.addEventListener("mouseout", function () {
+                document.getElementById("asus-logo").style.filter = "none";
+                document.getElementById("lenovo-logo").style.filter = "none";
+            });
+
+            lenovo.addEventListener("mouseover", function () {
+                document.getElementById("asus-logo").style.filter = "blur(8px)";
+                document.getElementById("hp-logo").style.filter = "blur(8px)";
+            });
+
+            lenovo.addEventListener("mouseout", function () {
+                document.getElementById("asus-logo").style.filter = "none";
+                document.getElementById("hp-logo").style.filter = "none";
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <header>
+
+        <!-------------------- Top Navigator -------------------->
+        <div class="wrap-header">
+
+            <!---------- Logo ---------->
+            <div class="header-left">
+                <a href="home.html"><img src="/image/icon/jampcs_white.png" alt="Home"></a>
+            </div>
+
+            <div class="header-mid">
+
+                <!---------- Products ---------->
+                <div class="hover-products">
+                    <a href="product-main.html">Products</a>
+                    <div class="wrap-product">
+                        <div class="content-products">
+                            <div class="wrap-column">
+                                <div class="column1">
+                                    <p>Brands</p>
+                                    <div class="hover-content-wrap">
+                                        <a href="product-asus.html">ASUS</a>
+                                        <a href="product-hp.html">HP</a>
+                                        <a href="product-lenovo.html">LENOVO</a>
+                                    </div>
+                                </div>
+                                <div class="column2">
+                                    <p>Customs</p>
+                                    <div class="hover-content-wrap">
+                                        <a href="custom-office.html">Build your own laptop</a>
+                                        <a href="build_guide.html">Guide for beginners</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="Promotion.html">Offers</a>
+                <a href="about-us.html">About US</a>
+
+            </div>
+
+            <!---------- Icons ---------->
+            <div class="header-right">
+                <a href="support.html"><img src="/image/icon/icon_question.png" alt="support"></a>
+                <a href="cart.html"><img src="/image/icon/icon_cart.png" alt="cart"></a>
+
+                <div class="icon-container" onmouseover="showLoginHover()" onmouseout="hideLoginHover()">
+                    <img src="/image/icon/icon_login.png" alt="login">
+
+                    <div id ="login-hover-wrap" style="display: none;">
+                        <div id="logout-hover">
+                            <a onclick="logout()">Logout</a>
+                        </div>
+                        <div id="login-hover">
+                            <a href="login.html">Login</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+    </header>
+
+     <!-------------------- Content -------------------->
+
+    <main>
+        <h1 id="LaptopBanners">Browse Gaming Laptops</h1>
+        <hr id="line1">
+        <div class="laptop-logos">
+            <div id="asus-logo" class="logo">
+                <img src="/image/product/asus-logo.jpg" alt="ASUS" usemap="#logo1">
+                <map name="ASUS" id="logo1">
+                    <area shape="default" href="product-asus.html" alt="Asus Laptops">
+                </map>
+
+            </div>
+
+            <div id="hp-logo" class="logo">
+                <img src="/image/product/hp-logo.jpg" alt="HP" usemap="#logo2">
+                <map name="HP" id="logo2">
+                    <area shape="default" href="product-hp.html" alt="HP Laptops">
+                </map>
+            </div>
+
+            <div id="lenovo-logo" class="logo">
+                <img src="/image/product/lenovo-logo.jpg" alt="" usemap="#logo3">
+                <map name="LENOVO" id="logo3">
+                    <area shape="default" href="product-lenovo.html" alt="Lenovo Laptops">
+                </map>
+            </div>
+        </div>
+        <hr id="line2">
+
+
+        <h1 id="CustomBanner">Build A PC Now</h1>
+        <div class="Custom">
+            <a href="/html/custom-office.html"><img src="/image/product/gaming_bckg2.jpg" alt="Custom Builds"></a>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-col-wrap">
+            <div class="footer-col1">
+                <h4>Quick Link</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="product-main.html">Products</a></li>
+                    <li><a href="Promotion.html">Offers</a></li>
+                    <li><a href="custom-office.html">Custom Builds</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col2">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="support.html">Service Centre</a></li>
+                    <li><a href="support.html">FAQs</a></li>
+                    <li><a href="support.html">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col3">
+                <h4>Opening Hours</h4>
+                <p> Mon-Fri </p>
+                <p> 09:00a.m.-6:00p.m. </p>
+                <p> Sat & Sun: Closed </p>
+
+            </div>
+            <div class="footer-col4">
+                <h4>Follow us</h4>
+
+                <!--------- social media icon --------->
+                <div class="social-icon-wrap">
+                    <a href="#"><img src="/image/icon/logo_facebook.png" alt=""><i></i></a>
+                    <a href="#"><img src="/image/icon/logo_youtube.png" alt=""><i></i></a>
+                    <a href="#"><img src="/image/icon/logo_whatsapp.png" alt=""><i></i></a>
+                    <a href="#"><img src="/image/icon/logo_insta.png" alt=""><i></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>This website serves as a submission for the "BAIT1023 Web Design and Development" course at TARUMT Penang Branch. It is not intended for commercial use or public dissemination beyond the scope of the course.</p> <!-- &#168 = unicode of copyright symbol -->
+        </div>
+
+    </footer>
+</body>
+
+
+
+</html>

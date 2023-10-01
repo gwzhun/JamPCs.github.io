@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="icon" href="/image/jamicon.png" type="png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>JamPCs - Customs</title>
+
+    <script src="/script/custom.js"></script>
+    <script src="/script/checkstatus-norm.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <!-------------------- Top Navigator -------------------->
+        <div class="wrap-header">
+
+            <!---------- Logo ---------->
+            <div class="header-left">
+                <a href="home.html"><img src="/image/icon/jampcs_white.png" alt="Home"></a>
+            </div>
+
+            <div class="header-mid">
+
+                <!---------- Products ---------->
+                <div class="hover-products">
+                    <a href="product-main.html">Products</a>
+                    <div class="wrap-product">
+                        <div class="content-products">
+                            <div class="wrap-column">
+                                <div class="column1">
+                                    <p>Brands</p>
+                                    <div class="hover-content-wrap">
+                                        <a href="product-asus.html">ASUS</a>
+                                        <a href="product-hp.html">HP</a>
+                                        <a href="product-lenovo.html">LENOVO</a>
+                                    </div>
+                                </div>
+                                <div class="column2">
+                                    <p>Customs</p>
+                                    <div class="hover-content-wrap">
+                                        <a href="custom-office.html">Build your own laptop</a>
+                                        <a href="build_guide.html">Guide for beginners</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="Promotion.html">Offers</a>
+                <a href="about-us.html">About US</a>
+
+            </div>
+
+
+            <!---------- Icons ---------->
+            <div class="header-right">
+                <a href="support.html"><img src="/image/icon/icon_question.png" alt="support"></a>
+                <a href="cart.html"><img src="/image/icon/icon_cart.png" alt="cart"></a>
+
+                <div class="icon-container" onmouseover="showLoginHover()" onmouseout="hideLoginHover()">
+                    <img src="/image/icon/icon_login.png" alt="login">
+
+                    <div id ="login-hover-wrap" style="display: none;">
+                        <div id="logout-hover">
+                            <a onclick="logout()">Logout</a>
+                        </div>
+                        <div id="login-hover">
+                            <a href="login.html">Login</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+    </header>
+
+     <!-------------------- Content -------------------->
+    <main>
+
+        <h1>Customs</h1>
+
+        <!-------------------- Modifiers -------------------->
+        <div class="mod-allwrap">
+            <div class="mod-all">
+                <div class="mod-title">
+                    <h1>CPU</h1>
+                </div>
+                <div class="mod-choice">
+                    <p><span id="selectedCPU"></span></p>
+                </div>
+                <div class="mod-desc">
+                    <p>
+                        The CPU is the brain of your PC. For complex applications like video and photo editing,
+                        streaming,
+                        or high-end gaming, you'll want to choose a higher-end CPU.
+                    </p>
+                </div>
+                <div class="mod-wrap">
+                    <div class="mod-img">
+                        <img src="/image/home_custombuild/custom_cpu.png" alt="">
+                    </div>
+                    <div class="mod-option">
+                        <form id="cpuForm">
+                            <label>
+                                <input type="radio" name="cpu" value="Intel Core i3-13100 Processor (4 Cores) - RM 650"
+                                    checked>
+                                Intel Core i3-13100 Processor (4 Cores)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="cpu"
+                                    value="Intel Core i5-13400 Processor (10 Cores) - RM 1080">
+                                Intel Core i5-13400 Processor (10 Cores)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="cpu"
+                                    value="Intel Core i7-13700 Processor (16 Cores) - RM 1800">
+                                Intel Core i7-13700 Processor (16 Cores)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="cpu"
+                                    value="Intel Core i9-13900 Processor (24 Cores) - RM 2700">
+                                Intel Core i9-13900 Processor (24 Cores)
+                            </label><br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mod-all">
+                <div class="mod-title">
+                    <h1>Graphics Card</h1>
+                </div>
+                <div class="mod-choice">
+                    <p><span id="selectedGPU"></span></p>
+                </div>
+                <div class="mod-desc">
+                    <p>
+                        The graphics card (GPU) is the muscle of your PC. For better visual performance, higher
+                        frame
+                        rates
+                        (FPS), and higher resolution displays, you'll want to go for a higher-end GPU.
+                    </p>
+                </div>
+                <div class="mod-wrap">
+                    <div class="mod-img">
+                        <img src="/image/home_custombuild/custom_gpu.png" alt="">
+                    </div>
+                    <div class="mod-option">
+                        <form id="gpuForm">
+                            <label>
+                                <input type="radio" name="gpu" value="NVIDIA GeForce RTX 3050 6GB GDDR6 - RM 1350"
+                                    checked>
+                                NVIDIA GeForce RTX 3050 6GB GDDR6
+                            </label><br>
+                            <label>
+                                <input type="radio" name="gpu" value="NVIDIA Geforce RTX 4060 8GB GDDR6 - RM 1800">
+                                NVIDIA Geforce RTX 4060 8GB GDDR6
+                            </label><br>
+                            <label>
+                                <input type="radio" name="gpu" value="NVIDIA Geforce RTX 4090 16GB GDDR6 - RM 3600">
+                                NVIDIA Geforce RTX 4090 16GB GDDR6
+                            </label><br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mod-all">
+                <div class="mod-title">
+                    <h1>RAM</h1>
+                </div>
+                <div class="mod-choice">
+                    <p><span id="selectedRAM"></span></p>
+                </div>
+                <div class="mod-desc">
+                    <p>
+                        RAM is your PC's short term memory. The more RAM you have, the more programs you can handle
+                        at
+                        once and the faster they'll run. Higher speed RAM provides a smoother experience.
+                    </p>
+                </div>
+                <div class="mod-wrap">
+                    <div class="mod-img">
+                        <img src="/image/home_custombuild/custom_ram.png" alt="">
+                    </div>
+                    <div class="mod-option">
+                        <form id="ramForm">
+                            <label>
+                                <input type="radio" name="ram" value="16GB Samsung DDR5 5600MHz (8x2) - RM 480" checked>
+                                16GB Samsung DDR5 5600MHz (8x2)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="ram" value="32GB Samsung DDR5 5600MHz (16x2) - RM 880">
+                                32GB Samsung DDR5 5600MHz (16x2)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="ram" value="64GB Patriot SL DDR5 5600MHz (32x2) - RM 1800">
+                                64GB Patriot SL DDR5 5600MHz (32x2)
+                            </label><br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mod-all">
+                <div class="mod-title">
+                    <h1>SSD</h1>
+                </div>
+                <div class="mod-choice">
+                    <p><span id="selectedSSD"></span></p>
+                </div>
+                <div class="mod-desc">
+                    <p>
+                        We provide the best M.2 SSDs to deliver lightning fast performance and load times. Your SSD
+                        is
+                        where we'll install Windows and where you'll store your most used games and applications.
+                    </p>
+                </div>
+                <div class="mod-wrap">
+                    <div class="mod-img">
+                        <img src="/image/home_custombuild/custom_ssd.png" alt="">
+                    </div>
+                    <div class="mod-option">
+                        <form id="ssdForm">
+                            <label>
+                                <input type="radio" name="ssd" value="1TB Lexar NM790 Gen4 SSD (7400/6500) - RM 600"
+                                    checked>
+                                1TB Lexar NM790 Gen4 SSD (7400/6500)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="ssd" value="2TB Lexar NM790 Gen4 SSD (7400/6500) - RM 1200">
+                                2TB Lexar NM790 Gen4 SSD (7400/6500)
+                            </label><br>
+                            <label>
+                                <input type="radio" name="ssd" value="4TB Lexar NM790 Gen4 SSD (7400/6500) - RM 2400">
+                                4TB Lexar NM790 Gen4 SSD (7400/6500)
+                            </label><br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--------------- Summary --------------->
+        <div class="summary-allwrap">
+            <div class="summary-wrap">
+                <div class="summary">
+                    <h2>Summary</h2>
+                    <div id="selectedItems">
+                        <!-- Selected items will be displayed here -->
+                    </div>
+                    <div id="totalPrice">
+                        Total : RM 0.00
+                    </div>
+                    <button onclick ="payment()" class="addtocart-button scale">
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        BAIT1023 RSW1 Assignment
+        JamPCs website
+
+        Products Main page
+        Author: Chin Gian Terng
+        Date: 18 August 2023
+
+        Filename: Product_main.html
+    -->
+    <meta charset="utf-8" />
+    <title>HP Laptops</title>
+    <link rel="icon" href="/image/jamicon.png" type="png">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/product-sub.css">
+    <script src="/script/buttonToCart.js"></script>
+    <script src="/script/checkstatus-norm.js"></script>
+
+</head>
+
+<body>
+    <header>
+
+        <!-------------------- Top Navigator -------------------->
+        <div class="wrap-header">
+
+            <!---------- Logo ---------->
+            <div class="header-left">
+                <a href="home.html"><img src="/image/icon/jampcs_white.png" alt="Home"></a>
+            </div>
+
+            <div class="header-mid">
+
+                <!---------- Products ---------->
+                <div class="hover-products">
+                    <a href="product-main.html">Products</a>
+                    <div class="wrap-product">
+                        <div class="content-products">
+                            <div class="wrap-column">
+                                <div class="column1">
+                                    <p>Brands</p>
+                                    <div class="hover-content-wrap">
+                                        <a href="product-asus.html">ASUS</a>
+                                        <a href="product-hp.html">HP</a>
+                                        <a href="product-lenovo.html">LENOVO</a>
+                                    </div>
+                                </div>
+                                <div class="column2">
+                                    <p>Customs</p>
+                                    <div class="hover-content-wrap">
+                                        <a href="custom-office.html">Build your own laptop</a>
+                                        <a href="build_guide.html">Guide for beginners</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="Promotion.html">Offers</a>
+                <a href="about-us.html">About US</a>
+
+            </div>
+
+
+            <!---------- Icons ---------->
+            <div class="header-right">
+                <a href="support.html"><img src="/image/icon/icon_question.png" alt="support"></a>
+                <a href="cart.html"><img src="/image/icon/icon_cart.png" alt="cart"></a>
+
+                <div class="icon-container" onmouseover="showLoginHover()" onmouseout="hideLoginHover()">
+                    <img src="/image/icon/icon_login.png" alt="login">
+
+                    <div id ="login-hover-wrap" style="display: none;">
+                        <div id="logout-hover">
+                            <a onclick="logout()">Logout</a>
+                        </div>
+                        <div id="login-hover">
+                            <a href="login.html">Login</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+    </header>
+
+     <!-------------------- Content -------------------->
+    <main>
+        <section name="product1">
+            <img src="/image/product/victus15-silver-front-facing.png"
+                alt="HP Victus 15.6-inch Gaming Laptop 15-fb1013AX Silver" class="laptop_image">
+            <div>
+                <article>
+                    <h3>Victus 15-fb1013AX Silver</h3>
+                    The HP Victus Laptop is made for peak PC gaming. This sleek machine touts a powerful AMD processor
+                    and NVIDIA graphi...
+                </article>
+                <div class="info">
+                    <aside class="price">
+                        <h3>RM 3,129.00</h3>
+                        <a href="victus15-silver.html" class="LearnMore">
+                            <h4>Learn More</h4>
+                        </a>
+                    </aside>
+                    <div class="add">
+                        <button type="button" onclick="addToCart('HP Victus 15.6-inch Gaming Laptop 15-fb1013AX Silver', 3129.00, '/image/product/victus15-silver-front-facing.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section name="product2">
+            <img src="/image/product/victus16-blue-front-facing.png"
+                alt="HP Victus 16-inch Gaming Laptop r0050TX Blue" class="laptop_image">
+            <div>
+                <article>
+                    <h3>Victus 16-r0050TX Blue</h3>
+                    The HP Victus 16-r0048TX 2023 Gaming Laptop is a powerhouse built to deliver an exceptional
+                    gaming...
+                </article>
+                <div class="info">
+                    <aside class="price">
+                        <h3>RM 4,559.00</h3>
+                        <a href="victus16-blue.html" class="LearnMore">
+                            <h4>Learn More</h4>
+                        </a>
+                    </aside>
+                    <div class="add">
+                        <button type="button" onclick="addToCart('HP Victus 16-inch Gaming Laptop r0050TX Blue', 4559.00, '/image/product/victus16-blue-front-facing.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section name="product3">
+            <img src="/image/product/omen-16-front-facing.png" alt="HP OMEN 16-inch Gaming Laptop 16-xf0029AX"
+                class="laptop_image">
+            <div>
+                <article>
+                    <h3>OMEN 16-xf0029AX</h3>
+                    The OMEN 16 inch gaming laptop is ready to go wherever you are. Enjoy desktop-level power with a
+                    7000 Series...
+                </article>
+                <div class="info">
+                    <aside class="price">
+                        <h3>RM 6,899.00</h3>
+                        <a href="omen16.html" class="LearnMore">
+                            <h4>Learn More</h4>
+                        </a>
+                    </aside>
+                    <div class="add">
+                        <button type="button" onclick="addToCart('HP OMEN 16-inch Gaming Laptop 16-xf0029AX', 6899.00, '/image/product/omen-16-front-facing.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-col-wrap">
+            <div class="footer-col1">
+                <h4>Quick Link</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="product-main.html">Products</a></li>
+                    <li><a href="Promotion.html">Offers</a></li>
+                    <li><a href="custom-office.html">Custom Builds</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col2">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="support.html">Service Centre</a></li>
+                    <li><a href="support.html">FAQs</a></li>
+                    <li><a href="support.html">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col3">
+                <h4>Opening Hours</h4>
+                <p> Mon-Fri </p>
+                <p> 09:00a.m.-6:00p.m. </p>
+                <p> Sat & Sun: Closed </p>
+
+            </div>
+            <div class="footer-col4">
+                <h4>Follow us</h4>
+
+                <!--------- social media icon --------->
+                <div class="social-icon-wrap">
+                    <a href="#"><img src="/image/icon/logo_facebook.png" alt=""><i></i></a>
+                    <a href="#"><img src="/image/icon/logo_youtube.png" alt=""><i></i></a>
+                    <a href="#"><img src="/image/icon/logo_whatsapp.png" alt=""><i></i></a>
+                    <a href="#"><img src="/image/icon/logo_insta.png" alt=""><i></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>This website serves as a submission for the "BAIT1023 Web Design and Development" course at TARUMT Penang Branch. It is not intended for commercial use or public dissemination beyond the scope of the course.</p> <!-- &#168 = unicode of copyright symbol -->
+        </div>
+
+    </footer>
+</body>
+
+
+
+</html>

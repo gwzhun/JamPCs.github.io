@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+@font-face {
+    font-family:Kanit;
+    src: url('/fonts/Kanit/Kanit-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family:Homenaje;
+    src: url('/fonts/Homenaje/Homenaje-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family:Urbanist;
+    src: url('/fonts/Urbanist/Urbanist-VariableFont_wght.ttf') format('ttf');
+}
+
+
+/*Structural Styles*/
+main{
+    width: 1024;
+}
+
+main div#top{
+    display: flex; 
+    margin-top: 20px;
+}
+
+main div#prod_pic{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main div#prod_pic {
+    max-width: 45%;
+    height: auto;
+    margin: 0;
+}
+
+main div#prod_pic img {
+    height: auto;
+    margin: 0;
+}
+
+main article{
+    max-width: 55%;
+    margin: 0 25px;
+}
+
+main article h3{
+    margin: 0 10px 5px;
+    transition-duration: 0.5s;
+}
+
+
+main article h4{
+    margin: 0 10px 10px 10px;
+    transition-duration: 0.5s;
+}
+
+main button.submitB{
+    border: solid 2px black;
+    border-radius: 14px;
+    max-width: 100%;
+    display: flex;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    background-color: #FCCE22;
+    color: black;
+}
+
+div#reviewVid {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+div.techSpecs_table {
+    margin-top: 1rem;
+}
+
+
+/*Table Styles*/
+main table.techSpecs {
+    z-index: 1;
+    margin: 0 auto;
+    width: 85%;
+    border-collapse: collapse;
+}
+
+main table.techSpecs tr th, td {
+    height: max-content;
+    padding: 35px 0;
+    border-bottom: solid 1px white;
+    border-left: 0;
+    border-right: 0;
+    margin: 10px 0;
+    vertical-align: center;
+}
+
+main table.techSpecs tr th{
+    width: 35%;
+}
+
+main table.techSpecs tr th.lastRow, td.lastRow  {
+    border-bottom: none;
+}
+
+/*Typography Styles*/
+main article h3{
+    text-align: center;
+    font-family: Homenaje, Strait, Impact, sans-serif;
+    font-size: 3rem;
+}
+
+main article h4{
+    font-size: 1.5rem;
+    font-family: Kanit, Impact, sans-serif;
+    font-variant: small-caps;
+}
+
+main article p{
+    font-size: 1.4rem;
+    font-family: Urbanist, Strait, Impact, sans-serif;
+    text-align: justify;
+    line-height: 1.4rem;
+    font-weight: bold;
+}
+
+main button.submitB{
+    font-size: 2.0rem;
+    font-family: Kanit, Impact, sans-serif;
+}
+
+div.techSpecs_table span{
+    font-size: 2.0rem;
+    font-family: Kanit, Impact, sans-serif;
+    font-variant: small-caps;
+    text-decoration: solid underline 2px;
+}
+
+main table.techSpecs tr th {
+    font-size: 1.5rem;
+    font-family: Kanit, Impact, sans-serif;
+}
+
+main table.techSpecs tr td {
+    font-size: 1.25rem;
+    font-family: Urbanist, Strait, Impact, sans-serif;
+}
+
+/*Responsive Styles*/
+main article h3:hover{
+    color: #f1f1f1;
+    transform: translateY(-5px);
+    scale: 1.05;
+}
+
+main article h4:hover{
+    color: #f1f1f1;
+    transform: translateY(-5px);
+    scale: 1.05;
+}
+
+main button.submitB:hover{
+    border: solid 2px rgba(255, 255, 255, 0.8);
+    background-color: #1C1C1C;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+main button.submitB:active{
+    border: solid 2px rgba(255, 255, 255, 0.8);
+    background-color: #1C1C1C;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    scale: 0.9;
+}
