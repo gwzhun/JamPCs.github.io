@@ -1,19 +1,10 @@
 @charset "utf-8";
 
 @font-face {
-    font-family:Kanit;
-    src: url('/fonts/Kanit/Kanit-Regular.ttf') format('ttf');
+    font-family: Kanit;
+    src: url(/fonts/Kanit/Kanit-Regular.ttf);
 }
 
-@font-face {
-    font-family:Homenaje;
-    src: url('/fonts/Homenaje/Homenaje-Regular.ttf') format('ttf');
-}
-
-@font-face {
-    font-family:Urbanist;
-    src: url('/fonts/Urbanist/Urbanist-VariableFont_wght.ttf') format('ttf');
-}
 
 
 /*Structural Styles*/
@@ -116,17 +107,17 @@ main article h3{
 }
 
 main article h4{
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-family: Kanit, Impact, sans-serif;
     font-variant: small-caps;
 }
 
 main article p{
-    font-size: 1.4rem;
-    font-family: Urbanist, Strait, Impact, sans-serif;
+    font-size: 1.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: justify;
     line-height: 1.4rem;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 main button.submitB{
@@ -142,7 +133,7 @@ div.techSpecs_table span{
 }
 
 main table.techSpecs tr th {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-family: Kanit, Impact, sans-serif;
 }
 

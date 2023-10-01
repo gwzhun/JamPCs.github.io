@@ -1,20 +1,5 @@
 @charset "utf-8";
 
-@font-face {
-    font-family: Kanit;
-    src: url('/fonts/Kanit/Kanit-Regular.ttf') format('ttf');
-}
-
-@font-face {
-    font-family: Homenaje;
-    src: url('/fonts/Homenaje/Homenaje-Regular.ttf') format('ttf');
-}
-
-@font-face {
-    font-family: Urbanist;
-    src: url('/fonts/Urbanist/Urbanist-VariableFont_wght.ttf') format('ttf');
-}
-
 /*Structural Styles*/
 main {
     display: flex;
@@ -142,25 +127,25 @@ div.info div.add button:active {
 /*Typography Styles*/
 section div article {
     text-align: justify;
-    line-height: 1.7rem;
-    font-size: 1.2rem;
-    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6rem;
+    font-size: 1.05rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 100;
 }
 
 section div article h3{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.9rem;
-    font-weight: 300;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
 }
 
 div.info aside h4 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.25rem;
     font-weight: 300;
 }
 
 div.info button {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.3rem;
 }
