@@ -233,6 +233,7 @@ html, body {
 .formField{
     text-align: left;
     margin-bottom: 20px;
+    display: flex;
 }
 
 .formField .inline{
