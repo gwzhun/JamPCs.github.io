@@ -25,6 +25,7 @@ main h1#LaptopBanners, h1#CustomBanner {
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    font-weight: 400 ;
 }
 
 main h1#LaptopBanners {
