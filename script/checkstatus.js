@@ -3,7 +3,7 @@ function logout() {
   sessionStorage.removeItem("isLogged"); // Remove the login status
   alert("Logged out successfully");
   // Redirect to the desired page after logout (e.g., home page)
-  window.location.href = "home.html";
+  window.location.href = "index.html";
 }
 
 // Check if the user is logged in
