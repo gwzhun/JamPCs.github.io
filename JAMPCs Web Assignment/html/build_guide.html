@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/build_guide.css" />
+    <title>JamPCs Build Guide</title>
+    <link rel="icon" href="/image/jamicon.png" type="/image/png">
+    <script src="/script/checkstatus-norm.js"></script>
+
+    <script>
+        function scrollToSection(sectionId) {
+            // Get a reference to the section element by its ID
+            const section = document.getElementById(sectionId);
+
+            // Check if the section element exists
+            if (section) {
+                // Scroll to the section using the scrollIntoView() method
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+
+        <!-------------------- Top Navigator -------------------->
+        <div class="wrap-header">
+
+            <!---------- Logo ---------->
+            <div class="header-left">
+                <a href="home.html"><img src="/image/icon/jampcs_white.png" alt="Home"></a>
+            </div>
+
+            <div class="header-mid">
+
+                <!---------- Products ---------->
+                <div class="hover-products">
+                    <a href="product-main.html">Products</a>
+                    <div class="wrap-product">
+                        <div class="content-products">
+                            <div class="wrap-column">
+                                <div class="column1">
+                                    <p>Brands</p>
+                                    <div class="hover-content-wrap">
+                                        <a href="product-asus.html">ASUS</a>
+                                        <a href="product-hp.html">HP</a>
+                                        <a href="product-lenovo.html">LENOVO</a>
+                                    </div>
+                                </div>
+                                <div class="column2">
+                                    <p>Customs</p>
+                                    <div class="hover-content-wrap">
+                                        <a href="custom-office.html">Build your own laptop</a>
+                                        <a href="build_guide.html">Guide for beginners</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="Promotion.html">Offers</a>
+                <a href="about-us.html">About US</a>
+
+            </div>
+
+
+            <!---------- Icons ---------->
+            <div class="header-right">
+                <a href="support.html"><img src="/image/icon/icon_question.png" alt="support"></a>
+                <a href="cart.html"><img src="/image/icon/icon_cart.png" alt="cart"></a>
+
+                <div class="icon-container" onmouseover="showLoginHover()" onmouseout="hideLoginHover()">
+                    <img src="/image/icon/icon_login.png" alt="login">
+
+                    <div id ="login-hover-wrap" style="display: none;">
+                        <div id="logout-hover">
+                            <a onclick="logout()">Logout</a>
+                        </div>
+                        <div id="login-hover">
+                            <a href="login.html">Login</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+    </header>
+
+     <!-------------------- Content -------------------->
+    <main>
+        <!-- Side Navigation -->
+        <div class="sidenav">
+            <ul>
+                <li onclick="scrollToSection('gaming')"><button>GAMING</button></li>
+
+                <li onclick="scrollToSection('office')"><button>OFFICE</button></li>
+
+                <li onclick="scrollToSection('productivity')"><button>PRODUCTIVITY</button></li>
+
+            </ul>
+        </div>
+        <!-------------------------------------------------------------- SECTION 1 -------------------------------------------------------------->
+
+        <!--------------------- Build Guide --------------------->
+        <div class="section1">
+            <div class="section1-text">
+                <h2>Build Guides</h2>
+                <p>Building your own pc and need ideas
+                    on where to get started? Explore our build which cover system for a
+                    variety use-cases and budgets</p>
+            </div>
+
+            <div class="section1-video">
+                <video src="/video/video-build_guide.mp4" type="video/mp4" controls loop></video>
+            </div>
+
+        </div>
+
+        <!-------------------------------------------------------------- SECTION 2 -------------------------------------------------------------->
+
+        <!--------------------- Gaming Pc --------------------->
+        <section class="gaming" id="gaming">
+            <div class="section2">
+                <div class="section2-fronttext fadefast"> <!-- Fade fast, faster fade transtition-->
+                    <h1 style="font-family: urbanist-bold;">GAMING PC</h1>
+                </div>
+
+                <div class="section2-hovertext fadeslow"> <!-- Fade slow, slower fade transtition-->
+                    <h2 style="font-family: urbanist-bold;">Gaming PC</h2>
+                    <p>
+                        Who isn't a fan of gaming, we all know which game to play from the 100s of available games
+                        as
+                        it's an
+                        easy choice, but when it comes to select a gaming pc to play our games, it seems so
+                        confusing as
+                        each pc
+                        look so same with the other which makes it difficult to make a perfect choice.
+                    </p>
+                    <p>
+                        So, if you are also worried that you didn't end up buying a gaming pc not worth for your
+                        budget,
+                        then
+                        don't worry, we have made a list of the gaming PCs available on various eCommerce merchants
+                        and
+                        listed
+                        all the best PCs, so you'll always end up choosing the best one among the rest.
+                    </p>
+                    <div class="section2-button">
+                        <a href="custom-gaming.html">View More &#129094</a>
+                    </div>
+                </div>
+                <img src="/image/buildguideImage/gaming_bckg2.jpg" alt="gaming" width="100%">
+            </div>
+
+            <!--------------------- Gaming Product --------------------->
+            <div class="gaming-product-wrap">
+
+                <div class="gaming-product">
+
+                    <p style="font-family: homenaje;font-weight: bold;font-size: 20px;padding-top: 5px;">TUF A15 (2023)
+                    </p>
+                    <div class="pic-container">
+                        <img src="/image/product/tuf-front-facing.png" alt="gaming-product1" width="250px">
+                    </div>
+
+                    <div class="product-description">
+                        <ul>
+                            <li><img src="/image/buildguideImage/icon-processor.png" alt="processor" width="18px">AMD
+                                Ryzen™
+                                9 7940HS Mobile Processor</li>
+                            <li><img src="/image/buildguideImage/icon-graphic_card.png" alt="graphic-card" width="18px">
+                                NVIDIA® GeForce RTX™ 4070</li>
+                            <li><img src="/image/buildguideImage/icon-screen.png" alt="screen" width="18px"> 15.6-inch,
+                                FHD
+                                (1920 x 1080)</li>
+                            <li><img src="/image/buildguideImage/icon-weight.png" alt="weight" width="18px">2.20 KG</li>
+                        </ul>
+                    </div>
+
+                    <div class="gaming-product-price">
+                        <p>From MYR <span style="font-size: 25px;font-family: urbanist-bold;">RM 4,699.00</span></p>
+                    </div>
+
+                    <a href="tuf-2023.html">
+                        <div class="gaming-product-button"> START SHOPPING </div>
+                    </a>
+
+                </div>
+
+                <div class="gaming-product">
+
+                    <p style="font-family: homenaje;font-weight: bold;font-size: 20px;padding-top: 5px;">ROG Zephyrus
+                        G14 (2023)</p>
+                    <div class="pic-container">
+                        <img src="/image/product/strix-front-facing.png" alt="gaming-product1" width="250px">
+                    </div>
+
+                    <div class="product-description">
+                        <ul>
+                            <li><img src="/image/buildguideImage/icon-processor.png" alt="processor" width="18px">AMD
+                                Ryzen™
+                                7 7735HS Mobile Processor</li>
+                            <li><img src="/image/buildguideImage/icon-graphic_card.png" alt="graphic-card" width="18px">
+                                NVIDIA® GeForce RTX™ 3050</li>
+                            <li><img src="/image/buildguideImage/icon-screen.png" alt="screen" width="18px"> 14-inch</li>
+                            <li><img src="/image/buildguideImage/icon-weight.png" alt="weight" width="18px">1.72 KG</li>
+                        </ul>
+                    </div>
+
+                    <div class="gaming-product-price">
+                        <p>From MYR <span style="font-size: 25px;font-family: urbanist-bold;">RM 6,499.00</span></p>
+                    </div>
+
+                    <div class="button-wrap">
+                        <a href="strix-2023.html">
+                            <div class="gaming-product-button"> START SHOPPING </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="gaming-product">
+
+                    <p style="font-family: homenaje;font-weight: bold;font-size: 20px;padding-top: 5px;">IdeaPad Gaming
+                        3</p>
+                    <div class="pic-container">
+                        <img src="/image/product/ideapad-front-facing.png" alt="gaming-product1" width="250px">
+                    </div>
+
+                    <div class="product-description">
+                        <ul>
+                            <li><img src="/image/buildguideImage/icon-processor.png" alt="processor" width="18px">AMD
+                                Ryzen™
+                                7 6800H Mobile Processor</li>
+                            <li><img src="/image/buildguideImage/icon-graphic_card.png" alt="graphic-card" width="18px">
+                                NVIDIA®GeForce RTX™ 3050</li>
+                            <li><img src="/image/buildguideImage/icon-screen.png" alt="screen" width="18px"> 15.6″ FHD
+                                IPS
+                                (1920 x 1080)</li>
+                            <li><img src="/image/buildguideImage/icon-weight.png" alt="weight" width="18px"> 2.40kg</li>
+                        </ul>
+                    </div>
+
+                    <div class="gaming-product-price">
+                        <p>From MYR <span style="font-size: 25px;font-family: urbanist-bold;">RM 3,749.00</span></p>
+                    </div>
+
+                    <a href="ideapad.html">
+                        <div class="gaming-product-button"> START SHOPPING </div>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!--------------------- Office Pc --------------------->
+        <section class="office" id="office">
+            <div class="section2">
+                <div class="section2-fronttext fadefast">
+                    <h1 style="font-family: urbanist-bold;">OFFICE PC</h1>
+                </div>
+
+                <div class="section2-hovertext fadeslow">
+                    <h2 style="font-family: urbanist-bold;">Office PC</h2>
+                    <p>
+                        An office PC, or "work computer," is like the unsung hero of the workplace. It's that
+                        dependable,
+                        slightly unassuming machine that sits on your desk and makes your daily tasks possible. It's not
+                        flashy or designed for gaming thrills, but it's the go-to tool for getting stuff done.
+                    </p>
+                    <p>
+                        While it might not be a powerhouse, it's no slouch either. It has enough RAM and storage to run
+                        smoothly, and it's connected to the office network for collaboration and internet access. Plus,
+                        it's
+                        got some security software to keep your work safe.
+                    </p>
+                    <div class="section2-button">
+                        <a href="custom-office.html">View More &#129094</a>
+                    </div>
+                </div>
+                <img src="/image/buildguideImage/office-bckg.png" alt="office" width="100%">
+            </div>
+
+            <!--------------------- Office Product --------------------->
+            <div class="gaming-product-wrap">
+
+                <div class="gaming-product">
+
+                    <p style="font-family: homenaje;font-weight: bold;font-size: 20px;padding-top: 5px;">Victus
+                        15-fb1013AX Silver</p>
+                    <div class="pic-container">
+                        <img src="/image/product/victus15-silver-front-facing.png" alt="gaming-product1" width="250px">
+                    </div>
+
+                    <div class="product-description">
+                        <ul>
+                            <li><img src="/image/buildguideImage/icon-processor.png" alt="processor" width="18px">AMD
+                                Ryzen™
+                                5 7535HS</li>
+                            <li><img src="/image/buildguideImage/icon-graphic_card.png" alt="graphic-card"
+                                    width="18px">NVIDIA® GeForce RTX™ 2050</li>
+                            <li><img src="/image/buildguideImage/icon-screen.png" alt="screen" width="18px"> 39.6 cm
+                                (15.6")
+                                diagonal</li>
+                            <li><img src="/image/buildguideImage/icon-weight.png" alt="weight" width="18px">2.29 kg</li>
+                        </ul>
+                    </div>
+
+                    <div class="gaming-product-price">
+                        <p>From MYR <span style="font-size: 25px;font-family: urbanist-bold;">RM 3,129.00</span></p>
+                    </div>
+
+                    <a href="victus15-silver.html">
+                        <div class="gaming-product-button"> START SHOPPING </div>
+                    </a>
+
+                </div>
+
+                <div class="gaming-product">
+
+                    <p style="font-family: homenaje;font-weight: bold;font-size: 20px;padding-top: 5px;">OMEN
+                        16-xf0029AX</p>
+                    <div class="pic-container">
+                        <img src="/image/product/omen-16-front-facing.png" alt="gaming-product1" width="250px">
+                    </div>
+
+                    <div class="product-description">
+                        <ul>
+                            <li><img src="/image/buildguideImage/icon-processor.png" alt="processor" width="18px">AMD
+                                Ryzen™
+                                7 7840HS</li>
+                            <li><img src="/image/buildguideImage/icon-graphic_card.png" alt="graphic-card"
+                                    width="18px">NVIDIA® GeForce RTX™ 4050</li>
+                            <li><img src="/image/buildguideImage/icon-screen.png" alt="screen" width="18px"> 40.9 cm
+                                (16.1")
+                                diagonal</li>
+                            <li><img src="/image/buildguideImage/icon-weight.png" alt="weight" width="18px"> 2.37 kg</li>
+                        </ul>
+                    </div>
+
+                    <div class="gaming-product-price">
+                        <p>From MYR <span style="font-size: 25px;font-family: urbanist-bold;">RM 6,899.00</span></p>
+                    </div>
+
+                    <a href="omen16.html">
+                        <div class="gaming-product-button"> START SHOPPING </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--------------------- Productivity Pc --------------------->
+        <section class="productivity" id="productivity">
+            <div class="section2">
+
+                <div class="section2-fronttext fadefast">
+                    <h1 style="font-family: urbanist-bold;">PRODUCTIVITY PC</h1>
+                </div>
+
+                <div class="section2-hovertext fadeslow">
+                    <h2 style="font-family: urbanist-bold;">Productivity PC</h2>
+                    <p>
+                        A productivity PC, or "get stuff done" computer, is your go-to sidekick for tackling work,
+                        studies,
+                        and whatever tasks life throws your way. It's like that reliable friend who's always there when
+                        you
+                        need them, ready to help you be your most efficient and organized self.
+                    </p>
+                    <p>
+                        In a nutshell, it might not be flashy or built for entertainment, but this PC is all about
+                        helping
+                        you get things done efficiently. It's the reliable buddy you turn to when work calls, and it's
+                        always up for the job.
+                    </p>
+                    <div class="section2-button">
+                        <a href="custom-productivity.html">View More &#129094</a>
+                    </div>
+                </div>
+                <img src="/image/buildguideImage/producitivity-bckg.jpg" alt="productivity" width="100%">
+            </div>
+
+            <!--------------------- Productivity Product --------------------->
+            <div class="gaming-product-wrap">
+
+                <div class="gaming-product">
+
+                    <p style="font-family: homenaje;font-weight: bold;font-size: 20px;padding-top: 5px;">Legion Slim 5
+                    </p>
+                    <div class="pic-container">
+                        <img src="/image/product/legionslim-front-facing.png" alt="gaming-product1" width="230px">
+                    </div>
+
+                    <div class="product-description">
+                        <ul>
+                            <li><img src="/image/buildguideImage/icon-processor.png" alt="processor" width="18px">AMD
+                                Ryzen™
+                                9 7940HS</li>
+                            <li><img src="/image/buildguideImage/icon-graphic_card.png" alt="graphic-card"
+                                    width="18px">NVIDIA® GeForce RTX™ 4070</li>
+                            <li><img src="/image/buildguideImage/icon-screen.png" alt="screen" width="18px"> 16″ WQXGA
+                                (2560
+                                x 1600) IPS</li>
+                            <li><img src="/image/buildguideImage/icon-weight.png" alt="weight" width="18px">2.3kg</li>
+                        </ul>
+                    </div>
+
+                    <div class="gaming-product-price">
+                        <p>From MYR <span style="font-size: 25px;font-family: urbanist-bold;">RM 5,189.00</span></p>
+                    </div>
+
+                    <a href="legionS5.html">
+                        <div class="gaming-product-button"> START SHOPPING </div>
+                    </a>
+
+                </div>
+
+                <div class="gaming-product">
+
+                    <p style="font-family: homenaje;font-weight: bold;font-size: 20px;padding-top: 5px;">LOQ 16IRH8</p>
+                    <div class="pic-container">
+                        <img src="/image/product/loq-front-facing.png" alt="gaming-product1" width="230px">
+                    </div>
+
+                    <div class="product-description">
+                        <ul>
+                            <li><img src="/image/buildguideImage/icon-processor.png" alt="processor" width="18px"> 13th
+                                Gen Intel® Core™ i7-13700H</li>
+                            <li><img src="/image/buildguideImage/icon-graphic_card.png" alt="graphic-card"
+                                    width="18px">NVIDIA® GeForce RTX™ 4060</li>
+                            <li><img src="/image/buildguideImage/icon-screen.png" alt="screen" width="18px"> Up to 16″
+                                WQXGA (2560 x 1600) IPS</li>
+                            <li><img src="/image/buildguideImage/icon-weight.png" alt="weight" width="18px"> Less than
+                                2.6kg</li>
+                        </ul>
+                    </div>
+
+                    <div class="gaming-product-price">
+                        <p>From MYR <span style="font-size: 25px;font-family: urbanist-bold;">RM 4,239.00</span></p>
+                    </div>
+
+                    <a href="loq.html">
+                        <div class="gaming-product-button"> START SHOPPING </div>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer-col-wrap">
+            <div class="footer-col1">
+                <h4>Quick Link</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="product-main.html">Products</a></li>
+                    <li><a href="Promotion.html">Offers</a></li>
+                    <li><a href="custom-office.html">Custom Builds</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col2">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="support.html">Service Centre</a></li>
+                    <li><a href="support.html">FAQs</a></li>
+                    <li><a href="support.html">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col3">
+                <h4>Opening Hours</h4>
+                <p> Mon-Fri </p>
+                <p> 09:00a.m.-6:00p.m. </p>
+                <p> Sat & Sun: Closed </p>
+
+            </div>
+            <div class="footer-col4">
+                <h4>Follow us</h4>
+
+                <!--------- social media icon --------->
+                <div class="social-icon-wrap">
+                    <a href="#"><img src="/image/icon/logo_facebook.png" alt=""><i></i></a>
+                    <a href="#"><img src="/image/icon/logo_youtube.png" alt=""><i></i></a>
+                    <a href="#"><img src="/image/icon/logo_whatsapp.png" alt=""><i></i></a>
+                    <a href="#"><img src="/image/icon/logo_insta.png" alt=""><i></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>This website serves as a submission for the "BAIT1023 Web Design and Development" course at TARUMT Penang Branch. It is not intended for commercial use or public dissemination beyond the scope of the course.</p> <!-- &#168 = unicode of copyright symbol -->
+        </div>
+
+    </footer>
+</body>
+
+</html>

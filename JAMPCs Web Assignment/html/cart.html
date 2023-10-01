@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!--
+        BAIT1023 RSW1 Assignment
+        JamPCs website
+
+        About Us page
+        Author: GOH WEI ZHUN
+        Date: 18 August 2023
+
+        Filename: About_Us.html
+    -->
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <script src="/script/checkstatus.js" async></script>
+    <title>JamPCs cart-list</title>
+    <link rel="icon" href="/image/jamicon.png" type="/image/png">
+    
+    <script src="/script/checkstatus-norm.js"></script>
+    <script>
+        // JavaScript for adding products to the cart
+        // Retrieve cart data from localStorage
+        var cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        function displayCart() {
+            // Get references to HTML elements for cart items and totals
+            var cartItemsElement = document.getElementById("cartItems");
+            var cartTotalElement = document.getElementById("cartTotal");
+            var carTotal_1_Element = document.getElementById("cartTotal_1");
+
+
+            if (cart.length === 0) {
+                //if the cart is empty , display a message
+                cartItemsElement.innerHTML = "<tr><td colspan='6'>No Product Selected</td></tr>";
+                cartTotalElement.textContent = "RM 0.00"; // Set total to 0
+                carTotal_1_Element.textContent = "RM 0.00";
+                total
+            }
+            else if (cart.length > 0) {
+                cartItemsElement.innerHTML = ""; // Clear existing cart items
+                var cartTotal = 0; // initialize the subtotal to 0
+
+                cart.forEach(function (item) {
+                    // Create a table row for each cart item
+                    var tr = document.createElement("tr");
+                    // Create a cell for the product image
+                    var imgCell = document.createElement("td");
+                    var img = document.createElement("img");
+                    img.src = item.image;
+                    img.alt = item.name + " Image";
+                    img.width = 50; // Set the image width as needed
+                    img.height = 70;
+                    imgCell.appendChild(img);
+                    tr.appendChild(imgCell);
+
+                    // Create a cell for the product name
+                    var nameCell = document.createElement("td");
+                    nameCell.textContent = item.name;
+                    tr.appendChild(nameCell);
+
+                    // Create a cell for the product price
+                    var priceCell = document.createElement("td");
+                    priceCell.textContent = "RM" + item.price.toFixed(2);
+                    tr.appendChild(priceCell);
+
+                    // Create a cell for the product quantity input
+                    var quantityCell = document.createElement("td");
+                    var quantityInput = document.createElement("input");
+                    quantityInput.type = "number";
+                    quantityInput.value = item.quantity;
+                    quantityInput.min = 1;
+                    quantityInput.max = 99;
+                    quantityInput.addEventListener("input", function () {
+                        updateQuantity(item, parseInt(quantityInput.value));
+                    });
+                    quantityCell.appendChild(quantityInput);
+                    tr.appendChild(quantityCell);
+
+
+                    // Create a cell for the total price of the product
+                    var totalCell = document.createElement("td");
+                    var total = item.price * item.quantity;
+                    totalCell.textContent = "RM" + total.toFixed(2);
+                    tr.appendChild(totalCell);
+
+                    // Add the table row to the cart items table
+                    cartItemsElement.appendChild(tr);
+                    // Update the cart total with the total price of the current product
+                    cartTotal += total;
+
+                    // Create a cell for the remove button
+                    var removeCell = document.createElement("td");
+                    var removeCross = document.createElement("img");
+                    removeCross.src = "/image/icon/delete.png"; // Replace with the path to your cross image
+                    removeCross.alt = "Remove";
+                    removeCross.width = 16; // Set the image width as needed
+                    removeCross.style.cursor = "pointer";
+                    removeCross.addEventListener("click", function () {
+                        removeFromCart(item.name);
+                        removeFromCart(item.price);
+                    });
+                    removeCell.appendChild(removeCross);
+                    tr.appendChild(removeCell);
+
+
+                    //store the total in local storage to pass to the payment page
+
+                });
+                localStorage.setItem("cartTotal", cartTotal);
+
+                //display the cart total for all product
+                cartTotalElement.textContent = "RM " + cartTotal.toFixed(2);
+
+                //display the total( which is same with the cart total)
+                carTotal_1_Element.textContent = "RM " + cartTotal.toFixed(2);
+            }
+        }
+
+        // Call the displayCart function to display cart items when the page loads
+        window.onload = displayCart;
+
+        function updateQuantity(item, quantity) {
+            // Update the quantity of an item and its total price
+            var totalPriceChange = (quantity - item.quantity) * item.price;
+            item.quantity = quantity;
+            updateCartData();
+        }
+
+        function removeFromCart(productName) {
+            // Remove an item from the cart by its product name
+            var itemIndex = cart.findIndex(item => item.name === productName);
+
+            if (itemIndex !== -1) {
+                var item = cart[itemIndex];
+                cart.splice(itemIndex, 1);
+                updateCartData();
+            }
+
+            localStorage.removeItem("total");
+        }
+
+        function updateCartData() {
+            // Update cart data in localStorage
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Calculate and store the cart total
+            var cartTotal = 0;
+            cart.forEach(function (item) {
+                cartTotal += item.price * item.quantity;
+            });
+            localStorage.setItem("cartTotal", cartTotal);
+
+            // Refresh the cart display
+            displayCart();
+        }
+
+        function jmp_payment() {
+            // alert user if the cart is empty
+            if (cart.length === 0) {
+                alert("Your cart is empty!");
+            }
+
+            // link to payment if the cart is not empty
+            else {
+                window.location.href = "payment-info.html";
+
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <header>
+
+        <!-------------------- Top Navigator -------------------->
+        <div class="wrap-header">
+
+            <!---------- Logo ---------->
+            <div class="header-left">
+                <a href="home.html"><img src="/image/icon/jampcs_white.png" alt="Home"></a>
+            </div>
+
+            <div class="header-mid">
+
+                <!---------- Products ---------->
+                <div class="hover-products">
+                    <a href="product-main.html">Products</a>
+                    <div class="wrap-product">
+                        <div class="content-products">
+                            <div class="wrap-column">
+                                <div class="column1">
+                                    <p>Brands</p>
+                                    <div class="hover-content-wrap">
+                                        <a href="product-asus.html">ASUS</a>
+                                        <a href="product-hp.html">HP</a>
+                                        <a href="product-lenovo.html">LENOVO</a>
+                                    </div>
+                                </div>
+                                <div class="column2">
+                                    <p>Customs</p>
+                                    <div class="hover-content-wrap">
+                                        <a href="custom-office.html">Build your own laptop</a>
+                                        <a href="build_guide.html">Guide for beginners</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="Promotion.html">Offers</a>
+                <a href="about-us.html">About US</a>
+
+            </div>
+
+
+            <!---------- Icons ---------->
+            <div class="header-right">
+                <a href="support.html"><img src="/image/icon/icon_question.png" alt="support"></a>
+                <a href="cart.html"><img src="/image/icon/icon_cart.png" alt="cart"></a>
+
+                <div class="icon-container" onmouseover="showLoginHover()" onmouseout="hideLoginHover()">
+                    <img src="/image/icon/icon_login.png" alt="login">
+
+                    <div id ="login-hover-wrap" style="display: none;">
+                        <div id="logout-hover">
+                            <a onclick="logout()">Logout</a>
+                        </div>
+                        <div id="login-hover">
+                            <a href="login.html">Login</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+    </header>
+
+     <!-------------------- Content -------------------->
+    <main>
+        <div class="cart-container">
+            <div class="cart">
+                <h2>Shopping Cart</h2>
+                <div class="cart-table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th width="200">Image</th>
+                                <th width="400">Details</th>
+                                <th width="100">Price</th>
+                                <th width="100">Quantity</th>
+                                <th width="100">Total</th>
+                                <th width="50">&nbsp</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="cartItems">
+                            <!-- Cart items will be added here dynamically -->
+                        </tbody>
+                    </table>
+
+                    <div class="cart-total">
+                        <hr class="line">
+                        <div class="container_total">Subtotal: <div class="boxtotal"><span class="sub_total"
+                                    id="cartTotal">RM 0.00</span></div>
+                        </div>
+                        <div class="container_total">Shipping Fee: <div class="boxtotal"><span class="Free">Free</span>
+                            </div>
+                        </div>
+                        <hr class="line">
+                        <div class="container_total">Total: <div class="boxtotal"><span class="total"
+                                    id="cartTotal_1">RM 0.00</span></div>
+                        </div>
+                        <hr class="line">
+                    </div>
+
+                    <button class="checkout_button" onclick="jmp_payment()">Check Out</button>
+
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-col-wrap">
+            <div class="footer-col1">
+                <h4>Quick Link</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="product-main.html">Products</a></li>
+                    <li><a href="Promotion.html">Offers</a></li>
+                    <li><a href="custom-office.html">Custom Builds</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col2">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="support.html">Service Centre</a></li>
+                    <li><a href="support.html">FAQs</a></li>
+                    <li><a href="support.html">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col3">
+                <h4>Opening Hours</h4>
+                <p> Mon-Fri </p>
+                <p> 09:00a.m.-6:00p.m. </p>
+                <p> Sat & Sun: Closed </p>
+
+            </div>
+            <div class="footer-col4">
+                <h4>Follow us</h4>
+
+                <!--------- social media icon --------->
+                <div class="social-icon-wrap">
+                    <a href="#"><img src="/image/icon/logo_facebook.png" alt=""><i></i></a>
+                    <a href="#"><img src="/image/icon/logo_youtube.png" alt=""><i></i></a>
+                    <a href="#"><img src="/image/icon/logo_whatsapp.png" alt=""><i></i></a>
+                    <a href="#"><img src="/image/icon/logo_insta.png" alt=""><i></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>This website serves as a submission for the "BAIT1023 Web Design and Development" course at TARUMT Penang Branch. It is not intended for commercial use or public dissemination beyond the scope of the course.</p> <!-- &#168 = unicode of copyright symbol -->
+        </div>
+
+    </footer>
+    
+</body>
+
+</html>

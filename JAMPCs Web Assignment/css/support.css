@@ -1,0 +1,317 @@
+@font-face {
+    font-family:Kanit;
+    src: url('/fonts/Kanit/Kanit-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family:Homenaje;
+    src: url('/fonts/Homenaje/Homenaje-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family:Urbanist;
+    src: url('/fonts/Urbanist/Urbanist-VariableFont_wght.ttf') format('ttf');
+}
+
+main .support{
+    font-size: 0;
+}
+html, body {
+    scroll-behavior: smooth;
+}
+
+/* Base styles for the <h1> with class "Help" */
+.Help {
+    font-family: Kanit, Monserrat, Hind, Impact, sans-serif;
+    font-weight: 400;
+    font-size: 45px;
+    margin-bottom: 70px;
+    color: white;
+    font-style: normal;
+    padding-top: 100px;
+    text-align: center;
+    transition: transform 0.2s;
+    cursor: default;
+}
+
+.Help:hover{
+    transform: translateY(-5px);
+}
+
+
+/* Styles for the support section */
+.support{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* Styles for support icon class*/
+.support-icon{
+    flex: 1; /* Make support icons evenly distribute in available space */
+    max-width: 300px; /* Limit maximum width of support icons */
+    margin: 40px; /* Adjust margin for spacing between icons */
+    transition: background-color 1s ease;
+    padding-bottom: 110px;
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+
+
+.support-icon a img{
+    padding-bottom: 40px;
+    margin: auto;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.support-icon img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.support-icon h2 {
+    font-family: Itim,cursive;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0;
+    cursor: default;
+    
+}
+
+.support-icon p{
+    font-family: Itim,cursive;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: lighter;
+    line-height: normal;
+    cursor: default;
+}
+
+.faq{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.faq h1{
+    color: white;
+    text-align: center;
+    font-size: 45px;
+    font-family: Kanit, Monserrat, Hind, Impact, sans-serif;
+    transition: transform 0.2s;
+    font-weight: 400;
+    cursor: default;
+}
+
+.faq h1:hover{
+    transform: translateY(-5px);
+}
+
+.faq h2{
+    text-align: center;
+    font-size: 25px;
+    cursor: default;
+}
+
+.faq .questionWrapper {
+    background-color: grey;
+    border-radius: 15px;
+    width: 1024px;
+    margin-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.faq .questionWrapper .accordionWrapper {
+    border-bottom: 1px solid #ccc;
+    width: 950px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.faq .questionWrapper .accordion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 950px;
+    cursor: pointer;
+}
+
+.faq .questionWrapper .accordion h2 {
+    color: #ececec;
+    margin-left: 0px;
+}
+
+.faq .questionWrapper .accordion-content {
+    overflow: hidden;
+    width: 950px;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    margin-bottom: 20px;
+}
+
+.faq .questionWrapper .accordion-content p{
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: large;
+}
+
+.faq .questionWrapper .accordion-button {
+    color: #fff;
+    cursor: pointer;
+    margin-right: 0px;
+}
+
+
+.faq .questionWrapper .accordion-button.rotated {
+    transform: rotate(180deg); 
+}
+
+.faq .questionWrapper .accordion-button-container {
+    display: flex;
+    align-items: center;
+}
+
+.serviceCenter{
+    margin-top: 50px;
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+.serviceCenter h1{
+    color: white;
+    font-size: 45px;
+    font-family: Kanit, Monserrat, Hind, Impact, sans-serif;
+    font-weight: 400;
+    transition: transform 0.2s;
+    cursor: default;
+}
+
+.serviceCenter h1:hover{
+    transform: translateY(-5px);
+}
+
+.serviceCenter h2{
+    font-size: 25px;
+    cursor: default;
+}
+
+.serviceCenter .formWrapper {
+    background-color: grey;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 1024px;
+}
+
+.serviceCenter .formWrapper h2{
+    margin-top: 20px;
+}
+
+.serviceCenter .formWrapper h3{
+    display: inline-block;
+    padding: 0px 30px 30px 30px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.formContainer{
+    width: 500px;
+}
+
+.formField{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.formField .inline{
+    display: inline-block;
+}
+
+.formField .labelWrapper{
+    background-color: rgb(39, 37, 37);
+    width: 200px;
+    height: 50px;
+    vertical-align: top;
+    text-align: center;
+    padding-top: 8px;
+    border-radius: 10px;
+}
+
+.formField .label{
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.formField .input{
+    width: 300px;
+    height: 50px;
+    margin-left: -4px;
+    color: grey;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    border-radius: 10px;
+    cursor: auto;
+}
+
+.formField .textArea{
+    width: 300px;
+    height: 100px;
+    margin-left: -4px;
+    font-size: 22px;
+    color: grey;
+    border: none;
+    outline: none;
+    /*set the text area only able to move at vertical side*/
+    resize: vertical;  
+    max-height: 500px;
+    border-radius: 10px;
+    cursor: auto;
+}
+
+
+/*button design*/
+.button{
+    font-family: Urbanist, Strait, Impact, sans-serif;   
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: yellow;
+    margin-left: 350px;
+    cursor: pointer;
+    color: black;
+    font-weight: 900;
+    font-size: 20px;
+    transition: all .2s ease-in-out;
+}
+
+.button:hover{
+    transform: scale(1.1); 
+    background: white; 
+    color: #3f5167;
+    border:  solid 3px #205696;
+    border-radius: 7px;
+}
+
+.button:active{
+    border: solid 2px rgba(255, 255, 255, 0.8);
+    background-color: #1C1C1C;
+    color: rgba(255, 255, 255, 0.8);
+    scale: 0.9;
+}
+
+
+

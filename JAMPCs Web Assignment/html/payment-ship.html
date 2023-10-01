@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/payment-ship.css" />
+    <link rel="icon" href="/image/jamicon.png" type="png">
+    <title>JamPCs payment</title>
+
+    <script language="JavaScript" type="text/JavaScript">
+
+        window.addEventListener("load", function() {
+        // load the value from the local storage from previous page
+        const emailValue = localStorage.getItem("email");
+        const addressValue = localStorage.getItem('address');
+        const shippingValue = localStorage.getItem('selectedShipping');
+
+        // to load back the radio selection when load back to this page
+        if (shippingValue) {
+        const radioInput = document.querySelector('input[value="${shippingValue}"]');
+        if (radioInput) {       
+            radioInput.checked = true;
+        }
+        }
+        // Find the element where you want to display the value
+        var email = document.getElementById("email")
+        var address = document.getElementById("address")
+
+        // Update the content of the element with the new value
+        email.textContent = emailValue;
+        address.textContent = addressValue;
+    })
+
+// script to store the value of selected radio button by the user
+function storeSelectedValue() {
+var selectedShipping = document.querySelector('input[name="shipping-choice"]:checked');
+if (selectedShipping) {
+    localStorage.setItem('selectedShipping', selectedShipping.value);
+}
+}
+</script>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="payment-outwrap">
+            <div class="payment-wrap">
+
+                <div class="payment-logo">
+                    <a href="home.html"><img src="/image/jampcs_logo.png" alt="jamCPs" width="400px"></a>
+                </div>
+
+                <!-------------------------- Logo -------------------------->
+                <div class="payment-nav">
+                    <ul>
+                        <li><a href="payment-info.html">Infomation</a> &#8594 </li>
+                        <li><a href="payment-ship.html" style="color: black;">Shipping</a> &#8594 </li>
+                        <li><a href="payment-checkout.html">Payment</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="shipping-wrap">
+
+                    <!-------------------------- User infomation -------------------------->
+                    <div class="shipping-info">
+
+                        <div style="border-bottom:1px solid  #c9c7c7;" class="row">
+                            <div class="col1">
+                                Contact
+                            </div>
+
+                            <div class="col2" id="email">
+
+                            </div>
+
+                            <div class="col3">
+                                <a href="payment-info.html"
+                                    style="text-decoration: underline;font-size:13px;color: #FCCE22;">Change</a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col1">
+                                Ship to
+                            </div>
+
+                            <div class="col2" id="address">
+
+                            </div>
+
+                            <div class="col3">
+                                <a href="payment-info.html"
+                                    style="text-decoration: underline;font-size:13px;color: #FCCE22;">Change</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-------------------------- Form -------------------------->
+                    <div class="shipping-form">
+                        <form action="payment-checkout.html">
+                            <h3>Shipping Method</h3>
+
+                            <div class="shipping-selection">
+                                <div class="shipping-choice">
+                                    <div class="shipping-button">
+                                        <input type="radio" name="shipping-choice" id="delivery" value="Delivery"
+                                            checked>
+                                    </div>
+
+                                    <div class="shipping-description">
+                                        <label for="delivery">
+                                            <p>Delivery Service</p>
+                                            <p style="opacity: 0.8;">
+                                                We'll provide you a quote of the deliveryservice after receiving your
+                                                order using the provided details. Unit is estimated to be ready in 2-4
+                                                weeks!
+                                            </p>
+                                        </label>
+                                    </div>
+
+                                    <div class="free">
+                                        <p style="font-weight: bold;font-size: 13px;">Free</p>
+                                    </div>
+
+                                </div>
+
+                                <div class="shipping-choice">
+                                    <div class="shipping-button">
+                                        <input type="radio" name="shipping-choice" id="self-collect"
+                                            value="Self Collect">
+                                    </div>
+
+                                    <div class="shipping-description">
+                                        <label for="self-collect">
+                                            <p>Self Collect</p>
+                                            <p style="opacity: 0.8;">
+                                                Unit will be ready for collection at the showroom in approximately 2-4
+                                                weeks !
+                                            </p>
+                                        </label>
+                                    </div>
+
+                                    <div class="free" style="align-items: flex-end;">
+                                        <p style="font-weight: bold;font-size: 13px;;">Free</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-bottom">
+                                <div class="return-info">
+                                    <a href="payment-info.html">&#8592; &nbsp; Return to information</a>
+                                </div>
+
+                                <a href="payment-checkout.html">
+                                    <div class="payment-button">
+                                        <button onclick="storeSelectedValue()">Continue to payment</button>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+                <!-------------------------- Footer -------------------------->
+                <div class="payment-footer">
+                    <p>All right reserved JAM PC</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-------------------------- Cart -------------------------->
+        <div class="cart-outwrap">
+
+            <div class="cart-inwrap">
+
+                <div class="total-wrap">
+
+                    <div class="total"> Subtotal:
+                        <div class="total-container">
+                            <span id="total_1"></span>
+                        </div>
+                    </div>
+
+                    <div class="total">Shipping Fee:
+                        <div class="total-container">
+                            Free
+                        </div>
+                    </div>
+
+                    <div class="total">Total:
+                        <div class="total-container">
+                            <span id="total_2"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+<script>
+    // retrieve the total amount from the cart 
+    const totalValue = localStorage.getItem("Total");
+
+    var totalbox1 = document.getElementById("total_1");
+    var totalbox2 = document.getElementById("total_2");
+
+    // display the total value according to the cart
+    totalbox1.textContent = "RM" + " " + totalValue + ".00";
+    totalbox2.textContent = "RM" + " " + totalValue + ".00";
+</script>
+
+
+
+</html>

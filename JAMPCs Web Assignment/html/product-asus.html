@@ -1,0 +1,219 @@
+<!DOCTYPE html />
+<html>
+
+<head>
+    <!--
+        BAIT1023 RSW1 Assignment
+        JamPCs website
+
+        Products Main page
+        Author: Chin Gian Terng
+        Date: 18 August 2023
+
+        Filename: Product_main.html
+    -->
+    <base href="">
+    <meta charset="utf-8" />
+    <title>ASUS Laptops</title>
+    <link rel="icon" href="/image/jamicon.png" type="png">
+
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/product-sub.css">
+    <script src="/script/buttonToCart.js"></script>
+    <script src="/script/checkstatus-norm.js"></script>
+
+</head>
+
+<body>
+    <header>
+
+        <!-------------------- Top Navigator -------------------->
+        <div class="wrap-header">
+
+            <!---------- Logo ---------->
+            <div class="header-left">
+                <a href="home.html"><img src="/image/icon/jampcs_white.png" alt="Home"></a>
+            </div>
+
+            <div class="header-mid">
+
+                <!---------- Products ---------->
+                <div class="hover-products">
+                    <a href="product-main.html">Products</a>
+                    <div class="wrap-product">
+                        <div class="content-products">
+                            <div class="wrap-column">
+                                <div class="column1">
+                                    <p>Brands</p>
+                                    <div class="hover-content-wrap">
+                                        <a href="product-asus.html">ASUS</a>
+                                        <a href="product-hp.html">HP</a>
+                                        <a href="product-lenovo.html">LENOVO</a>
+                                    </div>
+                                </div>
+                                <div class="column2">
+                                    <p>Customs</p>
+                                    <div class="hover-content-wrap">
+                                        <a href="custom-office.html">Build your own laptop</a>
+                                        <a href="build_guide.html">Guide for beginners</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="Promotion.html">Offers</a>
+                <a href="about-us.html">About US</a>
+
+            </div>
+
+
+            <!---------- Icons ---------->
+            <div class="header-right">
+                <a href="support.html"><img src="/image/icon/icon_question.png" alt="support"></a>
+                <a href="cart.html"><img src="/image/icon/icon_cart.png" alt="cart"></a>
+
+                <div class="icon-container" onmouseover="showLoginHover()" onmouseout="hideLoginHover()">
+                    <img src="/image/icon/icon_login.png" alt="login">
+
+                    <div id ="login-hover-wrap" style="display: none;">
+                        <div id="logout-hover">
+                            <a onclick="logout()">Logout</a>
+                        </div>
+                        <div id="login-hover">
+                            <a href="login.html">Login</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+    </header>
+
+     <!-------------------- Content -------------------->
+     
+    <main>
+        <section name="product1">
+            <img src="/image/product/tuf-front-facing.png" alt="ASUS TUF A15 (2023)" class="laptop_image">
+            <div>
+                <article>
+                    <h3>TUF A15 (2023)</h3>
+                    2023 TUF Gaming A15 is equipped with Windows 11, up to an AMD Ryzen™ 7040 Series Processor and up to
+                    a NVIDIA® RTX™ 4070 Laptop GPU. Fluid gameplay await...
+                </article>
+                <div class="info">
+                    <aside class="price">
+                    <h3>RM 4,699.00</h3>
+                    <a href="tuf-2023.html">
+                        <h4>Learn More</h4>
+                    </a>
+                    </aside>
+                    <div class="add">
+                        <button type="button" onclick="addToCart('ASUS TUF A15 (2023)', 4699.00, '/image/product/tuf-front-facing.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section name="product2">
+            <img src="/image/product/zephyrus-front-facing.png" alt="ASUS ROG Zephyrus G14 (2023)"
+                class="laptop_image">
+            <div>
+                <article>
+                    <h3>ROG Zephyrus G14 (2023)</h3>
+                    2023 ROG Zephyrus G14 is powered up with an AMD Ryzen™ 9 series CPU, up to Radeon™ RX 6800S GPU with
+                    MUX switch, a vapor chamber and liquid metal. Immerse...
+                </article>
+                <div class="info">
+                <aside class="price">
+                    <h3>RM 6,499.00</h3>
+                    <a href="zephyrus-2023.html">
+                        <h4>Learn More</h4>
+                    </a>
+                </aside>
+                <div class="add">
+                    <button type="button" onclick="addToCart('ASUS ROG Zephyrus G14 (2023)', 6499.00, '/image/product/zephyrus-front-facing.png')">Add to Cart</button>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <section name="product3">
+            <img src="/image/product/strix-front-facing.png" alt="ASUS ROG Strix SCAR 18 (2023)"
+                class="laptop_image">
+            <div>
+                <article>
+                    <h3>ROG Strix SCAR 18 (2023)</h3>
+                    STRIX SCAR 18: Featuring up to an Intel® Core™ i9-13980HX processor, up to an NVIDIA® GeForce RTX™
+                    4090 Laptop GPU with a NVIDIA Advanced Optimus, and t...
+                </article>
+                <div class="info">
+                <aside class="price">
+                    <h3>RM 18,999.00</h3>
+                    <a href="strix-2023.html">
+                        <h4>Learn More</h4>
+                    </a>
+                </aside>
+                <div class="add">
+                    <button type="button" onclick="addToCart('ASUS ROG Strix SCAR 18 (2023)', 18999.00, '/image/product/strix-front-facing.png')">Add to Cart</button>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-col-wrap">
+            <div class="footer-col1">
+                <h4>Quick Link</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="product-main.html">Products</a></li>
+                    <li><a href="Promotion.html">Offers</a></li>
+                    <li><a href="custom-office.html">Custom Builds</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col2">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="support.html">Service Centre</a></li>
+                    <li><a href="support.html">FAQs</a></li>
+                    <li><a href="support.html">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col3">
+                <h4>Opening Hours</h4>
+                <p> Mon-Fri </p>
+                <p> 09:00a.m.-6:00p.m. </p>
+                <p> Sat & Sun: Closed </p>
+
+            </div>
+            <div class="footer-col4">
+                <h4>Follow us</h4>
+
+                <!--------- social media icon --------->
+                <div class="social-icon-wrap">
+                    <a href="#"><img src="/image/icon/logo_facebook.png" alt=""><i></i></a>
+                    <a href="#"><img src="/image/icon/logo_youtube.png" alt=""><i></i></a>
+                    <a href="#"><img src="/image/icon/logo_whatsapp.png" alt=""><i></i></a>
+                    <a href="#"><img src="/image/icon/logo_insta.png" alt=""><i></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>This website serves as a submission for the "BAIT1023 Web Design and Development" course at TARUMT Penang Branch. It is not intended for commercial use or public dissemination beyond the scope of the course.</p> <!-- &#168 = unicode of copyright symbol -->
+        </div>
+
+    </footer>
+</body>
+
+
+
+</html>

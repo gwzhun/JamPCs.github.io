@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/payment-checkout.css" />
+    <link rel="icon" href="/image/jamicon.png" type="png">
+    <title>JamPCs payment</title>
+
+    <script src="/script/form.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="payment-outwrap">
+            <div class="payment-wrap">
+
+                <div class="payment-logo">
+                    <a href="home.html"><img src="/image/jampcs_logo.png" alt="jamCPs" width="400px"></a>
+                </div>
+
+                <div class="payment-nav">
+                    <ul>
+                        <li><a href="payment-info.html">Infomation</a> &#8594 </li>
+                        <li><a href="payment-ship.html">Shipping</a> &#8594 </li>
+                        <li><a href="payment-checkout.html" style="color: black;">Payment</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="checkout-wrap">
+
+                    <!-------------------------- User Infomation -------------------------->
+                    <div class="shipping-info">
+
+                        <div style="border-bottom:1px solid  #c9c7c7;" class="row">
+                            <div class="col1">
+                                Contact
+                            </div>
+
+                            <div class="col2" id="email">
+
+                            </div>
+
+                            <div class="col3">
+                                <a href="payment-info.html"
+                                    style="text-decoration: underline;font-size:13px;color: #FCCE22;">Change</a>
+                            </div>
+                        </div>
+
+                        <div style="border-bottom:1px solid  #c9c7c7;" class="row">
+                            <div class="col1">
+                                Ship to
+                            </div>
+
+                            <div class="col2" id="address">
+
+                            </div>
+
+                            <div class="col3">
+                                <a href="payment-info.html"
+                                    style="text-decoration: underline;font-size:13px;color: #FCCE22;">Change</a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col1">
+                                Shipping method
+                            </div>
+
+                            <div class="col2" id="shipping">
+
+                            </div>
+
+                            <div class="col3">
+                                <a href="payment-ship.html"
+                                    style="text-decoration: underline;font-size:13px;color: #FCCE22;">Change</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="checkout-payment">
+                        <h3>Payment</h3>
+                        <p style="opacity: 0.8;font-size: 13px;margin: 5px 0;">All transaction are secure and encrypted.
+                        </p>
+
+                        <div class="payment-choice">
+                            <p style="border: 1px solid #FCCE22;">Bank Deposit</p>
+                            <p style="text-align: center;">You have selected Bank Transfer payment as your preferred
+                                payment method.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="checkout-billing">
+                        <h3>Billing Address</h3>
+                        <p style="opacity: 0.8;font-size: 13px;margin: 5px 0;">Select the address that matches your
+                            card or payment method.</p>
+
+                        <div class="billing-choice">
+
+                            <label for="shipping1">
+
+                                <div class="billing-wrap">
+                                    <div class="billing-button">
+                                        <input type="radio" name="address" id="shipping1" checked>
+                                    </div>
+                                    <div class="billing-description">
+                                        <span>Same as shipping address</span>
+                                    </div>
+                                </div>
+
+                            </label>
+
+                            <label for="shipping2">
+
+                                <div class="billing-form-wrap">
+                                    <div class="billing-wrap" style="border:1px solid #bbbbbb90;;">
+                                        <div class="billing-button">
+                                            <input type="radio" name="address" id="shipping2">
+                                        </div>
+                                        <div class="billing-description">
+                                            <span>Use a different billing address</span>
+                                        </div>
+                                    </div>
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="payment-form">
+
+                        <div class="form-shipping">
+                            <form action="build_guide.html">
+                                <p>Country</p>
+                                <select name="country" id="country">
+                                    <option value="------ Country/Region ------">------
+                                        Country/Region ------</option>
+                                    <option value="Malaysia">MALAYSIA</option>
+                                </select>
+                                <div class="form-shipping-name">
+                                    <div class="first_name">
+                                        <p>First Name</p>
+                                        <input type="text" name="first_name" id="first_name" placeholder="First name"
+                                            size="28" required pattern="^[A-Za-z\s]+$">
+                                    </div>
+                                    <div class="last_name">
+                                        <p>Last Name</p>
+                                        <input type="text" name="last_name" id="last_name" placeholder="Last name"
+                                            size="28" required pattern="^[A-Za-z\s]+$">
+                                    </div>
+                                </div>
+
+                                <p>Company</p>
+                                <input type="text" name="company" id="company" placeholder="Company (optional)"
+                                    size="62">
+                                <p>Address</p>
+                                <input type="text" name="address" id="Address" placeholder="Address" size="62"
+                                    pattern="^(?=\S*\s)(?=[^a-zA-Z]*[a-zA-Z])(?=\D*\d)[a-zA-Z\d\s',.#/-]*$">
+                                <p>Apartment</p>
+                                <input type="text" name="Apartment" id="Apartment"
+                                    placeholder="Apartment, suite, etc. (optional)" size="62">
+
+                                <div class="form-shipping-address">
+                                    <div class="postcode">
+                                        <p>Postcode</p>
+                                        <input type="text" name="postcode" id="postcode" placeholder="Postcode"
+                                            maxlength="5" pattern="[0-9]{5}">
+                                    </div>
+                                    <div class="city">
+                                        <p>City</p>
+                                        <input type="text" name="city" id="city" placeholder="City"
+                                            pattern="^[A-Za-z\s]+$">
+                                    </div>
+                                    <div class="state">
+                                        <p>State</p>
+                                        <select name="state" id="state">
+                                            <option value="state">------ State ------</option>
+                                            <option value="Johor">Johor</option>
+                                            <option value="Kedah">Kedah</option>
+                                            <option value="Kelantan">Kelantan</option>
+                                            <option value="Kuala Lumpur">Kuala Lumpur</option>
+                                            <option value="Labuan">Labuan</option>
+                                            <option value="Malacca">Malacca</option>
+                                            <option value="Negeri Sembilan">Negeri Sembilan</option>
+                                            <option value="Pahang">Pahang</option>
+                                            <option value="Penang">Penang</option>
+                                            <option value="Perak">Perak</option>
+                                            <option value="Perlis">Perlis</option>
+                                            <option value="Putrajaya">Putrajaya</option>
+                                            <option value="Sabah">Sabah</option>
+                                            <option value="Sarawak">Sarawak</option>
+                                            <option value="Selangor">Selangor</option>
+                                            <option value="Terengganu">Terengganu</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <p>Phone</p>
+                                <input type="tel" id="phone" name="phone" size="62" placeholder="Phone" maxlength="11"
+                                    pattern="^(?=\S{10,12}$)(\d{3}[-\s]?\d{4}[-\s]?\d{4}|\d{10}|\d{3}[-\s]?\d{7})$"
+                                    required>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        <div class="return-info">
+                            <a href="payment-ship.html">&#8592; &nbsp; Return to shipping</a>
+                        </div>
+                        <form action="#">
+                            <div class="payment-button">
+                                <button type="button" onclick="completeOrder()">Complete Order</button>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-------------------------- Footer -------------------------->
+            <div class="payment-footer">
+                <p>All right reserved JAM PC</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-------------------------- Cart -------------------------->
+    <div class="cart-outwrap">
+
+        <div class="cart-inwrap">
+
+            <div class="total-wrap">
+
+                <div class="total"> Subtotal:
+                    <div class="total-container">
+                        <span id="total_1"></span>
+                    </div>
+                </div>
+
+                <div class="total">Shipping Fee:
+                    <div class="total-container">
+                        Free
+                    </div>
+                </div>
+
+                <div class="total">Total:
+                    <div class="total-container">
+                        <span id="total_2"></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+
+    <script>
+        window.addEventListener("load", function () {
+            // load the value from the local storage from previous page
+            const emailValue = localStorage.getItem("email");
+            const addressValue = localStorage.getItem('address')
+            const shippingValue = localStorage.getItem('selectedShipping')
+
+            // Find the element where you want to display the value
+            var email = document.getElementById("email")
+            var address = document.getElementById("address")
+            var shipping = document.getElementById("shipping")
+
+            // Update the content of the element with the new value
+            email.textContent = emailValue;
+            address.textContent = addressValue;
+            shipping.textContent = shippingValue;
+
+            if (cartValue !== null && customValue !== null) {
+                totalValue = parseFloat(cartValue) + parseFloat(customValue);
+            } else if (cartValue !== null) {
+                totalValue = parseFloat(cartValue);
+            } else if (customValue !== null) {
+                totalValue = parseFloat(customValue);
+            }
+
+        });
+
+        function completeOrder() {
+            localStorage.removeItem("cart");
+            localStorage.removeItem("cartTotal");
+            localStorage.removeItem("Customtotal");
+            localStorage.removeItem("Total");
+            alert("We have received your order!");
+            // Use JavaScript to navigate
+            window.location.href = "home.html";
+        }
+
+        // retrieve the total amount from the cart 
+        const totalVal = localStorage.getItem("Total");
+
+        var totalbox1 = document.getElementById("total_1");
+        var totalbox2 = document.getElementById("total_2");
+
+        // display the total value according to the cart
+        totalbox1.textContent = "RM" + " " + totalVal + ".00";
+        totalbox2.textContent = "RM" + " " + totalVal + ".00";
+    </script>
+
+</body>
+
+</html>
