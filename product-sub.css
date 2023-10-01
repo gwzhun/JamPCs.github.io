@@ -155,6 +155,7 @@ section div article h3{
 div.info aside h4 {
     font-family: Kanit, Impact, sans-serif;
     font-size: 1.25rem;
+    font-weight: 500;
 }
 
 div.info button {
