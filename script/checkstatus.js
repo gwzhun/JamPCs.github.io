@@ -31,7 +31,7 @@ function checkLoginForCart() {
   if (isLogged !== "true") {
     // User is not logged in, redirect to login page
     alert("You must be logged in to view your cart.");
-    window.location.href = "Login.html";
+    window.location.href = "login.html";
   }
 }
 
