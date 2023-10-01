@@ -130,6 +130,7 @@ section.about-logo div.centering{
 section.about-logo div.centering h2#pzn, h2#pz, h2#svc, h2#shp{
     font-family: Kanit, Impact, sans-serif;
     font-size: 1.8rem;
+    font-weight: 400;
 }
 
 div.elaborations h3{
