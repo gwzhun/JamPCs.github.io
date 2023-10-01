@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: Kanit;
+    src: url('/fonts/Kanit/Kanit-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: Homenaje;
+    src: url('/fonts/Homenaje/Homenaje-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: Urbanist;
+    src: url('/fonts/Urbanist/Urbanist-VariableFont_wght.ttf') format('ttf');
+}
+
+/*Structural Styles*/
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 1024px;
+   
+}
+
+main section {
+    margin-top: 50px;
+    max-width: 33.33%;
+    max-height: 600px;
+    width: 25%;
+}
+
+main img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+section div article,
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: justify;
+    margin: 0;
+    padding: 0;
+}
+
+section div.info aside,
+div.add {
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+section div article h3{
+    margin: 0 0 25px 0;
+    text-align: center;
+}
+
+div.info {
+    display: flex;
+}
+
+div.info aside h3 {
+    margin: 0;
+    margin-bottom: 4px;
+    padding: 0;
+}
+
+section aside.price a {
+    margin: 0;
+}
+
+div.info div.add {
+   margin-top: 83px;
+}
+
+
+div.info aside h4 {
+    border: solid 2px black;
+    border-radius: 14px;
+    padding: 0 4px;
+    max-width: 100%;
+    display: flex;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    background-color: #FCCE22;
+    color: black;
+}
+
+div.info div.add button {
+    border: solid 2px black;
+    border-radius: 14px;
+    padding: 0 4px;
+    max-width: 100%;
+    display: flex;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    background-color: #FCCE22;
+    color: black;
+}
+
+/*Responsive Styles*/
+
+div.info aside h4:hover {
+    border: solid 2px rgba(255, 255, 255, 0.8);
+    background-color: #1C1C1C;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+div.info aside h4:active {
+    border: solid 2px black;
+    border-radius: 14px;
+    padding: 0 4px;
+    max-width: 100%;
+    display: flex;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    background-color: #FCCE22;
+    color: black;
+}
+
+div.info div.add button:hover {
+    border: solid 2px rgba(255, 255, 255, 0.8);
+    background-color: #1C1C1C;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+div.info div.add button:active {
+    border: solid 2px rgba(255, 255, 255, 0.8);
+    background-color: #1C1C1C;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    scale: 0.9;
+}
+
+/*Typography Styles*/
+section div article {
+    text-align: justify;
+    line-height: 1.6rem;
+    font-size: 1.2rem;
+    font-family: Urbanist, Strait, Impact, sans-serif;
+}
+
+section div article h3{
+    font-family: Homenaje, Strait, Impact, sans-serif;
+    font-size: 1.9rem;
+}
+
+div.info aside h4 {
+    font-family: Kanit, Impact, sans-serif;
+    font-size: 1.25rem;
+}
+
+div.info button {
+    font-family: Kanit, Impact, sans-serif;
+    font-size: 1.3rem;
+}

@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+@font-face {
+    font-family:Kanit;
+    src: url(/fonts/Kanit/Kanit-Regular.ttf);
+}
+
+@font-face {
+    font-family:Homenaje;
+    src: url(/fonts/Homenaje/Homenaje-Regular.ttf);
+}
+
+@font-face {
+    font-family:Urbanist;
+    src: url(/fonts/Urbanist/static/Urbanist-Thin.ttf);
+}
+
+*{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+footer{
+    background-color:#2C2C2C;                    /* so that footer can stick at the bottom ( distance between bottom = 0 ) */
+}
+
+/*============ Footer Wrapper ============*/
+.footer-col-wrap{
+    display: flex;
+    width: 1024px;
+    padding: 30px 0;
+}
+
+/*============ Footer Content ============*/
+
+.footer-col3 p{
+    margin: 4px;
+    padding-left: 18px;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+ul li{
+    padding-top: 4px ;
+    padding-left: 18px;
+}
+
+ul li a{
+    color: rgba(255, 255, 255, 0.6); 
+}
+
+ul li a:hover{
+    color: white;
+
+}
+
+/*============ Social Icon ============*/
+.social-icon-wrap{
+    display: flex;
+    align-items: center;
+}
+
+
+.social-icon-wrap img{
+    width: 22px;
+    margin: 4px;
+    opacity: 0.7;
+}
+
+.social-icon-wrap img:hover{
+   opacity: 1;
+}
+
+.footer-bottom p{
+    background-color:grey;
+    color: black;
+    margin: 0;
+    text-align: center;
+    font-weight: 550;
+}

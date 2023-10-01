@@ -1,0 +1,151 @@
+
+@font-face {
+    font-family:Urbanist;
+    src: url('/fonts/Urbanist/Urbanist-VariableFont_wght.ttf') format('ttf');
+}
+
+
+.cart-container {
+    width: 1024px;
+    height: auto;
+    overflow: hidden; /*Hide any oveflowing content*/ 
+    background-color: rgb(155, 149, 149);
+    border-radius: 20px;
+    margin-top: 80px;
+    margin-bottom: 400px;
+    padding-bottom: 80px;
+}
+.cart h2{
+    color: rgb(52, 52, 52);
+    padding-left: 20px;
+    text-align: left;
+    font-size: 40px;
+    padding-bottom: 10px;
+    transition: transform 0.2s;
+}
+.cart h2:hover{
+    transform: translateY(-5px);
+}
+
+
+table{
+    border-collapse:collapse;
+    height: 100%;
+}
+
+table thead{
+    border-bottom: 2px solid rgb(1, 255, 43);
+    background-color: rgb(64, 67, 67);
+}
+
+table thead tr th{
+    color: rgb(223, 222, 222);
+}
+
+table tbody tr {
+    text-align: center;
+}
+
+table tbody tr td:nth-child(1) img {
+    text-align: center;
+    margin:20px 0 20px 45px;
+    border: none;
+    width: 100px;
+    border-radius: 10px;
+}
+
+table tbody tr td:nth-child(6) img{
+    text-align: center;
+    width: 20px;
+    height: 20px;
+}
+
+table tbody tr td input {
+    text-align: center;
+    background-color: rgb(170, 162, 162);
+    border: none;
+    width: 80px;
+    border-radius: 15px;
+}
+
+tbody{
+    background-color: rgb(125, 132, 132);
+}
+
+table thead th{
+    font-size: 20px;
+}
+
+
+/*subtotal and total*/
+.cart-total {
+    width:900px;
+    font-size: 24px;
+    padding-top: 50px;
+    padding-left: 600px;
+}
+
+.cart-total div{
+    color: black;
+}
+
+.cart-total div span{
+    color: rgb(255, 255, 221);
+}
+
+div.container_total{
+    font-family: Urbanist, Strait, Impact, sans-serif;   
+    font-weight: 600;
+}
+
+.cart-total {
+    padding: auto;
+}
+
+.container_total{
+    display: flex;
+}
+
+
+.boxtotal{
+    max-width: 200px;
+    margin-right: 0;
+}
+
+.total,
+.sub_total,
+.Free{
+    font-weight: bold;
+    font-family: Urbanist, Strait, Impact, sans-serif;   
+}
+
+/*button design*/
+button.checkout_button{
+    font-family: Urbanist, Strait, Impact, sans-serif;   
+    font-weight: 700;
+    background-color: yellow;
+    color: black;
+    float: right;
+    margin-right: 60px;
+    width: 100px;
+    height:40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+button.checkout_button:hover{
+    transform: scale(1.1); 
+    background: white; 
+    color: #3f5167;
+    border:  solid 2px #205696;
+    border-radius: 7px;
+}
+
+button.checkout_button:active{
+    border: solid 2px rgba(255, 255, 255, 0.8);
+    background-color: #1C1C1C;
+    color: rgba(255, 255, 255, 0.8);
+    scale: 0.9;
+}

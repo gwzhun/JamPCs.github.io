@@ -1,0 +1,211 @@
+/*
+
+Color Standardization
+Background      : #2C2C2C   ( dark space grey )
+Sub background  : #1C1C1C  ( space grey )
+Normal Font     : rgba(255, 255, 255, 0.8);  ( white color with 0.8 opacity )
+Hovered font    : white
+logo yellow     : #FCCE22
+
+Font family standardization
+Contents        : Urbanist
+Header          : Kanit
+
+*/  
+
+@charset "utf-8";
+
+@font-face {
+    font-family:Kanit;
+    src: url(/fonts/Kanit/Kanit-Regular.ttf);
+}
+
+@font-face {
+    font-family:Homenaje;
+    src: url(/fonts/Homenaje/Homenaje-Regular.ttf);
+}
+
+@font-face {
+    font-family:Urbanist;
+    src: url(/fonts/Urbanist/static/Urbanist-Thin.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: Urbanist;
+}
+
+html {
+    overflow-x: hidden;
+    background-color: #1C1C1C;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    display: block;
+    align-items: center;    
+
+}
+
+/*===== Header Styles ==================================================== */
+
+header {
+    position: fixed;
+    background-color:#2C2C2C;
+    width: 100%;
+    z-index: 5;
+}
+
+header .wrap-header{
+    display: flex;
+    align-items: center;
+    width: 1024px;
+    padding: 0px 13px 0px 13px;
+}
+
+header .header-left {
+    float: left;
+    margin-left: 0;
+}
+
+header .header-left img {
+    height: 30px;
+}
+
+header .header-mid {
+    display: flex;
+    width: 50%;
+    line-height: 30px;
+}
+
+header .header-mid a {
+    display: block;
+    padding: 8px 0px 8px 0px;
+    color: rgba(255, 255, 255, 0.6);   
+    font-family: Kanit;
+    font-size: 20px;
+   
+}
+
+header .header-right {
+    display: flex;
+    align-items: center;
+}
+
+header .header-right img{
+    margin-left: 10px;
+}
+
+header .icon-container{
+    cursor: pointer;
+}
+
+header #logout-hover {
+    position: absolute;
+    padding-left: 20px;
+    
+}
+
+header #logout-hover a:hover{
+    color: white;
+}
+
+header #login-hover {
+    position: absolute;
+    padding-left: 20px;
+    
+}
+
+header #login-hover a:hover{
+    color: white;
+}
+
+header .header-right img {
+    height: 20px;
+    opacity: 0.6;
+}
+
+header .icon-container{
+    display: flex;
+}
+
+
+/* ===== Hover Styles ==================================================== */
+
+header .content-products{
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background-color:#2C2C2C;
+}
+
+
+header .header-mid a:hover {
+    color: white;
+}
+
+header .header-mid > .hover-products:hover .content-products{
+    display: block;
+}
+
+.header-right img:hover {
+    opacity: 1;
+}
+
+header .wrap-column {
+    display: flex;
+    width: 1024px;
+    padding: 0px 13px 0px 13px;
+}
+
+header .wrap-column p {
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+header .wrap-column a {
+    letter-spacing: 1px;
+    font-family: Urbanist;
+    font-size: 30px;
+    padding-left: 35px;
+    margin: 0;
+    
+}
+
+header .column1 {
+    border-right: solid 2px;
+    border-color: rgba(255, 255, 255, 0.25);
+    width:512px;
+    margin: 20px 0 20px 25px;    
+}
+
+header .column1 .hover-content-wrap{
+    width: 30%;
+    margin: 0;
+}
+
+header .column2 {
+    width:512px;
+    margin: 20px 0 20px 25px;
+}
+
+header .column2 .hover-content-wrap{
+    width: 70%;
+    margin: 0;
+}
+
+
+/* ===== Content Styles ==================================================== */
+
+main {
+    padding-top: 46px;
+}
+
